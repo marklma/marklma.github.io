@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Mark L Ma -- Bloger -- marklma
+
+# THANKS
+
+    Mark L Ma
+
+# TECHNOLOGY COLOPHON
+
+    Hexo
+    chenall

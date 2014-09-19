@@ -1,0 +1,17 @@
+Disallow: /404.html
+Disallow: /archives/
+Disallow: /categories/
+Disallow: /tags/
+Disallow: /widgets/
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Google Image
+User-agent: Googlebot-Image
+Disallow:
+Allow: /
+
+User-agent: Mediapartners-Google
+Disallow:
+
+Sitemap: http://marklma.ga/sitemap.xml 
