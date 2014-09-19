@@ -14,4 +14,4 @@ Allow: /
 User-agent: Mediapartners-Google
 Disallow:
 
-Sitemap: http://marklma.ga/sitemap.xml 
+Sitemap: http://marklma.ml/sitemap.xml 
