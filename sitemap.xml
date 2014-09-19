@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://marklma.ml/</loc>
+        <lastmod>2014-09-18T23:21:00+08:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://marklma.ml/archives/</loc>
+        <lastmod>2014-09-18T23:21:00+08:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://marklma.ml/article/2014/09/filetitle2/</loc>
+        <lastmod>2014-09-18T23:21:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://marklma.ml/article/2014/09/filetitle/</loc>
+        <lastmod>2014-09-18T23:21:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://marklma.ml/article/2014/09/hello-world/</loc>
+        <lastmod>2014-09-17T23:55:00+08:00</lastmod>
+    </url>
+</urlset>
