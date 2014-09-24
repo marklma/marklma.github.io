@@ -3,7 +3,7 @@
   <title><![CDATA[MarkLMa's Blog]]></title>
   <link href="http://marklma.ml/atom.xml" rel="self"/>
   <link href="http://marklma.ml/"/>
-  <updated>2014-09-19T12:05:33+08:00</updated>
+  <updated>2014-09-24T19:05:18+08:00</updated>
   <id>http://marklma.ml/</id>
   <author>
     <name><![CDATA[Mark L Ma]]></name>
@@ -12,27 +12,173 @@
   <generator uri="http://press.opoo.org/">OpooPress</generator>
 
   <entry>
-    <title type="html"><![CDATA[文章标题2]]></title>
-    <link href="http://marklma.ml/article/2014/09/filetitle2/"/>
-    <updated>2014-09-18T23:21:00+08:00</updated>
-    <id>http://marklma.ml/article/2014/09/filetitle2/</id>
-    <content type="html"><![CDATA[]]></content>
+    <title type="html"><![CDATA[更换blog程序]]></title>
+    <link href="http://marklma.ml/2014/09/21/change-to-opoopress/"/>
+    <updated>2014-09-21T22:43:00+08:00</updated>
+    <id>http://marklma.ml/2014/09/21/change-to-opoopress/</id>
+    <content type="html"><![CDATA[身为“不折腾会死星人”，我果然又开始折腾更换一个blog程序了。]]></content>
   </entry>
   <entry>
-    <title type="html"><![CDATA[文章标题]]></title>
-    <link href="http://marklma.ml/article/2014/09/filetitle/"/>
-    <updated>2014-09-18T23:21:00+08:00</updated>
-    <id>http://marklma.ml/article/2014/09/filetitle/</id>
-    <content type="html"><![CDATA[]]></content>
+    <title type="html"><![CDATA[拔智齿经历]]></title>
+    <link href="http://marklma.ml/2014/09/16/something-about-Healthy-teeth/"/>
+    <updated>2014-09-16T22:54:00+08:00</updated>
+    <id>http://marklma.ml/2014/09/16/something-about-Healthy-teeth/</id>
+    <content type="html"><![CDATA[2014/9/13日拔右侧智齿]]></content>
   </entry>
   <entry>
-    <title type="html"><![CDATA[世界，你好！]]></title>
-    <link href="http://marklma.ml/article/2014/09/hello-world/"/>
-    <updated>2014-09-17T23:55:00+08:00</updated>
-    <id>http://marklma.ml/article/2014/09/hello-world/</id>
-    <content type="html"><![CDATA[<p>欢迎使用 <a href="http://www.opoopress.com/zh/">OpooPress</a>！</p>
-<p>这是系统自动生成的演示文章。编辑或者删除它，然后开始您的博客！</p>
-<p>当前版本: <em>1.1.1</em></p>
+    <title type="html"><![CDATA[门外汉厨房入门——序章（下）]]></title>
+    <link href="http://marklma.ml/2014/09/12/new-in-kitchen-00/"/>
+    <updated>2014-09-12T20:41:46+08:00</updated>
+    <id>http://marklma.ml/2014/09/12/new-in-kitchen-00/</id>
+    <content type="html"><![CDATA[<h3>第一盘可以认可的菜——芹菜炒肉</h3>
+<p>接<a href="http://baike.baidu.com/view/91922.htm?fr=aladdin">上篇</a>，我逐渐在后续的“烹饪实验”中找到了感觉，但还是由于懒的缘故，没有花大段时间去查资料研究怎么炒菜，虽然不符合我平时的作风，但偶尔还是完全依靠感觉来学习也是不错的经验。经过之前的“历练”，我大概总结了我自己炒菜的步骤：</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[门外汉厨房入门——序章（上）]]></title>
+    <link href="http://marklma.ml/2014/09/05/new-in-kitchen-0/"/>
+    <updated>2014-09-05T06:39:25+08:00</updated>
+    <id>http://marklma.ml/2014/09/05/new-in-kitchen-0/</id>
+    <content type="html"><![CDATA[<h3>前言</h3>
+<p>果然只有独自一人，没有饭堂、没人帮做饭菜这种条件下才会让我决心学做饭。想想高中大学都是住学校，由于有学校饭堂的存在，而且我又不挑食，所以在所谓“家务”的技能树中，应该除了“烹饪”技能几乎没有点之外，应该都有做过了。</p>
+<p>来到基层任职后，独自住在大院里，大院里有个厨房，厨房里设备算是勉强齐全，可以借着这些平台开始我的“烹饪实验”。</p>
+<p>做什么都得先有个目标，我学做菜的目标很简单：做出来的东西能吃、无害、别人吃了不说很难吃。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[将.mmap文件转换成.mm文件的软件——MarkMmap2mm]]></title>
+    <link href="http://marklma.ml/2014/09/01/MarkMmap2mm/"/>
+    <updated>2014-09-01T07:17:09+08:00</updated>
+    <id>http://marklma.ml/2014/09/01/MarkMmap2mm/</id>
+    <content type="html"><![CDATA[.mmap file convert to .mm file (java version)]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[三里生活感想]]></title>
+    <link href="http://marklma.ml/2014/08/16/live-in-sanli/"/>
+    <updated>2014-08-16T04:36:49+08:00</updated>
+    <id>http://marklma.ml/2014/08/16/live-in-sanli/</id>
+    <content type="html"><![CDATA[<p>因为我一直不会煮菜做饭，而且来到三里后独自居住，我就更觉得自己有必要趁此机会学习查下煮菜做饭了。</p>
+<p>《交响情人梦》里，男主角和女主角的老师都会料理，而且喜欢研究，但是我发觉我比较像剧中的孙蕊，做好饮食健康搭配即可，无视味道，煮菜做饭这种感觉就是浪费时间。但是来到三里独自居住后，想想这也好歹是个生活常识，也想是不是正好趁此机会学习学习料理，哦不，煮菜做饭呢。不过，我发现我很难学会煮饭，因为我对于食物没有什么追求，我发现我对食物的可接受范围太广了，而且好吃不好吃这种感觉差距不是特别大。我尝试去煮了道菜，吃下去完全无法判定这道菜对于他人吃起来是好吃还是不好吃，我极度怀疑我煮东西的话，那玩意是否煮熟了我都无法区分。当然这并不是类似《文学少女》里的女主角那种失味症，而是过于不挑食吧（类似贝爷？）。</p>
+<p>对于学习厨艺，我以前一直在想，搞一个<strong>一栈式生活毕业培训班</strong>：</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[三里任职随笔]]></title>
+    <link href="http://marklma.ml/2014/08/15/settle-in-sanli/"/>
+    <updated>2014-08-15T07:41:38+08:00</updated>
+    <id>http://marklma.ml/2014/08/15/settle-in-sanli/</id>
+    <content type="html"><![CDATA[<p>不得不吐槽一下，我似乎距离我喜欢的生活越来越远呢。我是科技崇尚派，我喜欢享受科技带来的便利，所以我似乎不太喜欢游山玩水（当然也可能是懒、宅，或者山水看多了？），旅游我更愿意看城市、看人文。感觉在大城市从事IT相关工作这应该是我所设想的生活吧。但是毕业后我放弃了在一线城市任职选择跑回老家——二线城市南宁。任职三年至今，我又突发奇想跑到了农村支局任职，而且不是从事后端技术维护工作，而是转而从事市场前端工作。虽说我自己认为自己做什么都有可能，也有着相关的心里准备，但是回看内心向往的生活以及毕业后的任职经历，我自己也诧异不已。</p>
+<p>我的选择正确吗？也许这是一种曲线救国？体验一下心理舒适区以外的世界是否能让我更成熟？种种疑问也许只有时间才能解答。</p>
+<p>感叹完毕，写一下初到农村支局的一些见闻感触吧。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[一款hexo主题]]></title>
+    <link href="http://marklma.ml/2014/08/11/hexo-theme-marklma/"/>
+    <updated>2014-08-11T01:34:07+08:00</updated>
+    <id>http://marklma.ml/2014/08/11/hexo-theme-marklma/</id>
+    <content type="html"><![CDATA[基于[Hexo]主题[chenall V2.2](https://github.com/chenall/hexo-theme-chenall)修改而成,未在主要功能上做相关改动,仅仅增加一些小插件以及按照自己想法*美化*主题.]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[我的博客自定义tk域名经历]]></title>
+    <link href="http://marklma.ml/2014/08/06/My-Blog-Domain-2/"/>
+    <updated>2014-08-06T00:19:04+08:00</updated>
+    <id>http://marklma.ml/2014/08/06/My-Blog-Domain-2/</id>
+    <content type="html"><![CDATA[申请tk、ga和ml域名的几个注意事项。]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[使用Markdown书写感慨]]></title>
+    <link href="http://marklma.ml/2014/08/04/Use-Markdown/"/>
+    <updated>2014-08-04T03:57:39+08:00</updated>
+    <id>http://marklma.ml/2014/08/04/Use-Markdown/</id>
+    <content type="html"><![CDATA[使用Markdown写作能让我这个懒人也喜欢上写blog。]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[我的博客自定义二级域名经历]]></title>
+    <link href="http://marklma.ml/2014/08/02/My-Blog-Domain-1/"/>
+    <updated>2014-08-02T08:08:00+08:00</updated>
+    <id>http://marklma.ml/2014/08/02/My-Blog-Domain-1/</id>
+    <content type="html"><![CDATA[本博客第一个域名，虽然是二级域名，但是申请到使用的过程也是一路磕磕碰碰。]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://marklma.ml/2014/07/31/MyFirstBlog/"/>
+    <updated>2014-07-31T07:48:05+08:00</updated>
+    <id>http://marklma.ml/2014/07/31/MyFirstBlog/</id>
+    <content type="html"><![CDATA[为了自己第一个自建blog的折腾记录。]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[正则表达式的力量-2：运营商运用案例]]></title>
+    <link href="http://marklma.ml/2014/03/20/The-power-of-Regular-Expression-2/"/>
+    <updated>2014-03-20T22:55:15+08:00</updated>
+    <id>http://marklma.ml/2014/03/20/The-power-of-Regular-Expression-2/</id>
+    <content type="html"><![CDATA[<p>以实际工作为例，运营商后端人员往往需要处理一些批量任务，会有IP、端口等信息，看看我们怎么批量处理这些信息为想要的结果。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[正则表达式的力量-1]]></title>
+    <link href="http://marklma.ml/2013/12/04/The-power-of-Regular-Expression-1/"/>
+    <updated>2013-12-04T06:12:11+08:00</updated>
+    <id>http://marklma.ml/2013/12/04/The-power-of-Regular-Expression-1/</id>
+    <content type="html"><![CDATA[<p>不管是什么工作，只要这个工作涉及到EXCEL等批量内容，我觉得学习一下<strong>正则表达式</strong>就是好的，它可以帮助你减轻一些批量工作。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Groovy与ANT配置]]></title>
+    <link href="http://marklma.ml/2013/10/20/groovy-ant-build/"/>
+    <updated>2013-10-20T20:52:11+08:00</updated>
+    <id>http://marklma.ml/2013/10/20/groovy-ant-build/</id>
+    <content type="html"><![CDATA[<p>捎带手学习了一下如何使用ANT，尝试了gradle，发现功能貌似过于强大，而且编译啥的好像可以集成ANT来使用，于是决定<strong>先</strong>学习使用常见的构建工具ant。本文中使用的环境是：
+Groovy Version: 2.1.7 JVM: 1.7.0_40 Vendor: Oracle Corporation OS: Windows 7 Apache Ant&trade; version 1.9.2
+log4j-1.2.17：放在\anttest\lib目录下，工程目录为\anttest\</p>
+<p>ant配置文件：
+\anttest\build.xml</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[h2 database的Recover Tool]]></title>
+    <link href="http://marklma.ml/2013/09/20/the-Recover-Tool-of-h2-database/"/>
+    <updated>2013-09-20T09:01:59+08:00</updated>
+    <id>http://marklma.ml/2013/09/20/the-Recover-Tool-of-h2-database/</id>
+    <content type="html"><![CDATA[<p>前段时间做的一个grails页面在服务器重启后突然挂了，TOMCAT跑不起来，各种报错，正好赶上近期Grails升级到了Grails-2.3.0版本，于是先尝试使用Grails-2.3.0，结果升级后试用结果各种碰壁，为了解决Grails2.3.0的问题，将Groovy升级到了2.1.7，将JDK改用了1.7，将所有路径改成了没有空格的，修改各种PATH、CLASSPATH，结果无功而返，不是缺少这就是缺少那，最后实在没辙了还是改用回了Grails-2.2.4。结果居然还是报错！但是新建项目没问题，而是旧项目出现了问题，纠结了半天才想到，是不是那个著名的“内存数据库”挂了。</p>
+<p>经过测试果不其然，确实是数据库挂了。想想数据库总有恢复功能吧，网上找了一下，没啥中文说明，最后还是在官方页面找到了解决方法。在此记录下方法：</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[grails和mysql乱码问题]]></title>
+    <link href="http://marklma.ml/2013/09/09/grails-mysql-messy-code/"/>
+    <updated>2013-09-09T06:50:02+08:00</updated>
+    <id>http://marklma.ml/2013/09/09/grails-mysql-messy-code/</id>
+    <content type="html"><![CDATA[<p>前几天试用grails+mysql想快速做一个页面，没想到最令人恶心的乱码又出现了，而且这次的乱码问题让我处理了半天都没处理出来，结果当我换回h2 database，发现中文正常才让我发现原来是mysql的编码问题导致的乱码。
+简单的domain:
+book.groovy</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Grails学习笔记（1）:Grails如何删除领域，如何使用grails generate-all]]></title>
+    <link href="http://marklma.ml/2013/09/03/grails-study-note-1-how-to-delele-domain-and-use-generate-all/"/>
+    <updated>2013-09-03T06:49:35+08:00</updated>
+    <id>http://marklma.ml/2013/09/03/grails-study-note-1-how-to-delele-domain-and-use-generate-all/</id>
+    <content type="html"><![CDATA[<pre>grails create-app racetrack
+grails create-domain-class Race
+grails create-controller-class Race
+</pre>]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[\[转载]Grails配置Mysql修改DataSource.groovy之后]]></title>
+    <link href="http://marklma.ml/2013/09/02/Grails-Mysql-DataSource/"/>
+    <updated>2013-09-02T07:54:23+08:00</updated>
+    <id>http://marklma.ml/2013/09/02/Grails-Mysql-DataSource/</id>
+    <content type="html"><![CDATA[<p>研究了半天，没想到是这个问题……</p>
+<p>原文地址：<a href="http://blog.sina.com.cn/s/blog_6d10ca65010153pw.html">Grails 配置Mysql 修改DataSource.groovy 之后 run-app 报Cannot load JDBC driver class错误</a> 作者：<a href="http://blog.sina.com.cn/u/1829816933">大头公子</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[My First Python & Groovy & Grails]]></title>
+    <link href="http://marklma.ml/2013/09/01/My-First-Python-Groovy-Grails/"/>
+    <updated>2013-09-01T06:45:34+08:00</updated>
+    <id>http://marklma.ml/2013/09/01/My-First-Python-Groovy-Grails/</id>
+    <content type="html"><![CDATA[<p>工作后，身为JAVA入门者的我一般需要编程都还是用Java来解决日常工作中遇到的一些小问题。总是感觉用Java开发实在是有些杀鸡焉用牛刀的感觉，也感觉java中编译再运行的感觉不适合快速开发一些只需要跑一次就可以丢弃的小程序，不像javascript、vbsript这类动态语言即编即用，而且像我这种还脱离不了eclipse的杂鱼来说，公司电脑跑一个eclipse就是一种摧残。所以一直想找一个动态语言来耍耍。</p>
 ]]></content>
   </entry>
 </feed>

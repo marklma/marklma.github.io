@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="zh"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>更换blog程序 - MarkLMa's Blog</title>
+  <meta name="author" content="Mark L Ma">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="OpooPressSiteRoot" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="OpooPress-1.1.1"/>
+  <meta name="Generated" content="2014-09-24T19:05:18+08:00"/>
+  <link rel="canonical" href="/2014/09/21/change-to-opoopress/">
+  
+  
+  <link href="/favicon.ico" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="MarkLMa's Blog" type="application/atom+xml">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href="//fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic|PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="/javascripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+  <!--[if lt IE 9]><script src="/javascripts/unsupported-browser.js"></script><![endif]-->
+  <header role="banner"><hgroup>
+  <h1><a href="/">MarkLMa's Blog</a></h1>
+    <h2>逝者如斯夫，不舍昼夜，so keep bloging.</h2>
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+<form action="http://wen.lu/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:http://marklma.ml" />
+    <input class="search" type="text" name="q" results="0" placeholder="搜索"/>
+  </fieldset>
+</form>
+
+<fieldset class="mobile-nav">
+  <select onchange="if (this.value) { window.location.href = this.value;}">
+    <option value="">导航&hellip;</option>
+    <option value="/">&raquo; 文章</option>
+    <option value="/archives/">&raquo; 归档</option>
+    <option value="/sample-page.html">&raquo; 示例页面</option>
+    <option value="/about/">&raquo; 关于</option>
+  </select>
+</fieldset>
+
+<ul class="main-navigation">
+<li><a href="/">文章</a></li>
+<li><a href="/archives/">归档</a></li>
+<li><a href="/sample-page.html">示例页面</a></li>
+<li><a href="/about/">关于</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+<div>
+<article class="hentry" role="article">
+  <header>
+      <h1 class="entry-title">更换blog程序</h1>
+
+      <p class="meta">
+		
+
+
+<time datetime="2014-09-21T22:43:00+08:00" pubdate>九月 21 2014</time>
+         | <a href="#ds-thread">评论</a>
+      </p>
+  </header>
+
+  <div class="entry-content"><h2>起因</h2>
+<p>并不是说原先使用的博客程序hexo不好，hexo很好，简单易用，很是方便。再配合<a href="https://github.com/chenall/hexo-theme-chenall">chenall主题</a>或者<a href="https://github.com/marklma/hexo-theme-marklma">marklma的hexo主题</a>使用，既美观又实用。</p>
+<p>但是近期发现我用的hexo有一个bug，不知道为什么在我的博客的非根路径下，诸如：http://marklma.ga/2014/08/10/hexo-theme-marklma/ 网址下点击右侧或下放的其它文章链接，它会默认将年月当作根路径，从而导致链接出错，诸如刚才的网址我点击右侧或下方的文章链接会变成：http://marklma.ga/2014/08/2014/08/31/MarkMmap2mm 从而导致404错误。</p>
+<p>而且还有一个是想到身为学java出身的伪程序员，果然还是希望使用java或者groovy的静态博客生成器，关键时候还能改改代码啥的。</p>
+<h2>选择</h2>
+<p>又跑到著名的静态博客查询网站<a href="http://staticsitegenerators.net">http://staticsitegenerators.net</a> 上去寻找想要的博客系统。虽然Groovy语言开发的还有个<a href="http://sysgears.com/grain/">Grain</a>，但是使用人少，而且看起来不是很好用。最后看来看去好像只有<a href="http://www.jbake.org">jbake</a>可以选择。</p>
+<p>为了好好学习jbake，找来<a href="https://github.com/jbake-org/jbake">jbake源码</a>看了一下，不愧是业余玩玩程序的伪程序员，看别人的源码真难看懂呀。看来看去还是觉得先上手使用再说了。结果用了一阵发现jbake插件太少也不好用，而且最重要的是居然没有分页……最后果断放弃。</p>
+<p>找来找去都没有什么好的博客软件了，难道我要投入wordpress的怀抱么。</p>
+<h2>决定</h2>
+<p>怀着一丝希望，继续在github上搜索，功夫不负有心人，直接github搜索<code>blog</code>，选择java语言的项目，被我找到了一个：<a href="https://github.com/opoo/opoopress">opoopress</a>，一款国产静态博客生成器。</p>
+<p>试用一下，发现不错，原生主题简单清晰，插件看起来还不错，有分页，又是java编写的，不需要我额外还安装类似python或者ruby等开发环境了。于是决定研究一下opoopress，看看是不是有空就将博客迁移，改由opoopress生成。</p>
+<h2>使用</h2>
+<p>本来也打算看看源码，结果发现源码居然没有main函数入口！真是奇葩，经过试用才知道原来opoopress是依靠maven进行相关操作，我用maven就会一个mvn别的都不懂了，等后面有空研究maven再来学习学习源码。</p>
+<p>使用中发现的一些不足之处反馈给作者的网站上，作者一般都能很快回答，这点我很是欣慰。</p>
+<p>虽然是国产软件，但是作者好像是国外工作一样，使用google fonts、googleplus、google分析、facebook等东西都有，本土化的东西倒是很少，导致生成的网站如果不修改相关信息会很慢，所以都得自己动手才能丰衣足食。</p>
+<p>这里介绍几个可修改的地方：</p>
+<ol>
+<li>将google fonts改成360镜像：site/templates/head.ftl中将<code>googleapi</code>改成<code>useso</code>即可。</li>
+<li>config.yml中使用“多说”，关闭推特、非死不可、google+这类分享。</li>
+<li>config.yml中将搜索改为其它：诸如我改成了googlestable。可以视情况修改成自己使用的搜索引擎。</li>
+<li>由于我是从HEXO转过来的，chenall的主题中有CDN_URL，我的文章中也使用了该关键字，为了方便使用，我再config.yml中添加了<pre>CDN_URL: //my.cdn
+</pre>平时引用只需文章中写上${site.CDN_URL}即可。</li>
+</ol>
+<h2>后续待做</h2>
+<ol>
+<li>hexo文章迁移。</li>
+<li>主题的修改。</li>
+<li>增加标签云、cnzz、visitmap、weibo等国内站常见应用。</li>
+</ol>
+</div>
+  <footer>
+    <p class="meta">
+<span class="byline author vcard">作者 <span class="fn">Mark L Ma</span></span>      
+
+
+<time datetime="2014-09-21T22:43:00+08:00" pubdate>九月 21 2014</time>
+
+<span class="categories">属于 <a class="category" href="/category/blog/">博客相关</a>
+ 分类</span>
+
+
+<span class="categories">被贴了 <a class="tag" href="/tag/blog/">博客相关</a>, <a class="tag" href="/tag/opoopress/">opoopress</a>, <a class="tag" href="/tag/bo-ke/">博客</a>
+ 标签</span>
+    </p>
+<div class="sharing">
+  </div>
+<p>
+  <h2>相关文章</h2>
+  <ul id="related-posts-list">
+      <li class="post">
+        <a href="/2014/08/11/hexo-theme-marklma/">一款hexo主题</a>
+        <div class="source right"><time datetime="2014-08-11T01:34:07">2014-08-11</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/08/06/My-Blog-Domain-2/">我的博客自定义tk域名经历</a>
+        <div class="source right"><time datetime="2014-08-06T00:19:04">2014-08-06</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/08/04/Use-Markdown/">使用Markdown书写感慨</a>
+        <div class="source right"><time datetime="2014-08-04T03:57:39">2014-08-04</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/08/02/My-Blog-Domain-1/">我的博客自定义二级域名经历</a>
+        <div class="source right"><time datetime="2014-08-02T08:08:00">2014-08-02</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/07/31/MyFirstBlog/">Hello World</a>
+        <div class="source right"><time datetime="2014-07-31T07:48:05">2014-07-31</time></div>
+      </li>
+  </ul>
+</p>    <p class="meta">
+        <a class="basic-alignment left" href="/2014/09/16/something-about-Healthy-teeth/" title="上一篇: 拔智齿经历">&laquo; 拔智齿经历</a>
+    </p>
+  </footer>
+</article>
+  <section>
+    <h1>评论</h1>
+    <div id="ds-thread" class="ds-thread" data-thread-key="/2014/09/21/change-to-opoopress/" data-title="更换blog程序"></div>
+  </section>
+</div>
+<aside class="sidebar">
+
+<section>
+  <h1>分类</h1>
+  <ul id="categories">
+	<li class="category"><a href="/category/android/">Android</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/blog/">博客相关</a><span class="count right">6</span>
+	</li>
+	<li class="category"><a href="/category/database/">Database</a><span class="count right">3</span>
+	</li>
+	<li class="category"><a href="/category/experience-and-thoughts/">经历感悟</a><span class="count right">20</span>
+	</li>
+	<li class="category"><a href="/category/funny/">小品</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/groovy/">Groovy</a><span class="count right">5</span>
+	</li>
+	<li class="category"><a href="/category/health/">健康</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/j2ee/">J2EE</a><span class="count right">9</span>
+	</li>
+	<li class="category"><a href="/category/rookie-in-kitchen/">门外汉厨房入门</a><span class="count right">2</span>
+	</li>
+	<li class="category"><a href="/category/tools-and-technology/">工具技术</a><span class="count right">9</span>
+	</li>
+  </ul>
+</section>
+<section>
+  <h1>近期文章</h1>
+  <ul id="recent_posts">
+  
+  
+      <li class="post">
+        <a href="/2014/09/21/change-to-opoopress/">更换blog程序</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/16/something-about-Healthy-teeth/">拔智齿经历</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/12/new-in-kitchen-00/">门外汉厨房入门——序章（下）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/05/new-in-kitchen-0/">门外汉厨房入门——序章（上）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/01/MarkMmap2mm/">将.mmap文件转换成.mm文件的软件——MarkMmap2mm</a>
+      </li>
+  </ul>
+</section>
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/marker2337@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+</aside>
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  版权所有 &copy; 2014 - Mark L Ma -
+  <span class="credit">Powered by <a href="http://www.opoopress.com/">OpooPress</a></span>
+</p>
+</footer>
+<script type="text/javascript" src="/javascripts/opoopress.min.js"></script>
+<script language="JavaScript">
+<!--
+    window.OpooPress = new OpooPressApp({siteUrl:'http://marklma.ml',rootUrl:'',pageUrl:'/2014/09/21/change-to-opoopress/',title:'更换blog程序',refreshRelativeTimes:true,verbose:false},{});
+    OpooPress.init();
+
+
+var duoshuoQuery = {short_name:"MarkLMa"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+//-->
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="zh"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>中了U盘病毒，文件夹被隐藏了或U盘打不开怎么办 - MarkLMa's Blog</title>
+  <meta name="author" content="Mark L Ma">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="OpooPressSiteRoot" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="OpooPress-1.1.1"/>
+  <meta name="Generated" content="2014-09-24T19:05:18+08:00"/>
+  <link rel="canonical" href="/2008/07/12/what-if-usb-disk-virus/">
+  
+  
+  <link href="/favicon.ico" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="MarkLMa's Blog" type="application/atom+xml">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href="//fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic|PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="/javascripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+  <!--[if lt IE 9]><script src="/javascripts/unsupported-browser.js"></script><![endif]-->
+  <header role="banner"><hgroup>
+  <h1><a href="/">MarkLMa's Blog</a></h1>
+    <h2>逝者如斯夫，不舍昼夜，so keep bloging.</h2>
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+<form action="http://wen.lu/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:http://marklma.ml" />
+    <input class="search" type="text" name="q" results="0" placeholder="搜索"/>
+  </fieldset>
+</form>
+
+<fieldset class="mobile-nav">
+  <select onchange="if (this.value) { window.location.href = this.value;}">
+    <option value="">导航&hellip;</option>
+    <option value="/">&raquo; 文章</option>
+    <option value="/archives/">&raquo; 归档</option>
+    <option value="/sample-page.html">&raquo; 示例页面</option>
+    <option value="/about/">&raquo; 关于</option>
+  </select>
+</fieldset>
+
+<ul class="main-navigation">
+<li><a href="/">文章</a></li>
+<li><a href="/archives/">归档</a></li>
+<li><a href="/sample-page.html">示例页面</a></li>
+<li><a href="/about/">关于</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+<div>
+<article class="hentry" role="article">
+  <header>
+      <h1 class="entry-title">中了U盘病毒，文件夹被隐藏了或U盘打不开怎么办</h1>
+
+      <p class="meta">
+		
+
+
+<time datetime="2008-07-12T17:34:54+08:00" pubdate>七月 12 2008</time>
+         | <a href="#ds-thread">评论</a>
+      </p>
+  </header>
+
+  <div class="entry-content"><p>最近经常有同学的U盘插了一些电脑后，出现U盘内的原本的文件夹被隐藏了不能显示，而显示为原本文件夹名字和样子是.exe文件，双击后没有什么反应。在使用杀毒软件之后，双击等进不了U盘，而是跳出打开方式对话框，或进去后U盘内找不到文件夹了。那很遗憾的告诉你，你的U盘中病毒了！</p>
+<!--more-->
+<p>通过U盘传播的病毒会生成Autorun.inf文件，只要里面有如右图内容，那么，不论是对盘符双击打开，右键打开，右键资源管理器打开，都会自动运行病毒（这里是setup.exe）。</p>
+<p>建议大家进入U盘用右键单击桌面的“我的电脑”—>“资源管理器”，点击左边的盘符进入U盘；或双击打开我的电脑，从上方输入“X:\”进入对应盘（X为您要进入盘的盘符）；或是用一些软件安全进入U盘，如USBKILLER等。</p>
+<p>为了防止AUTORUN.INF文件造成中病毒，我们可以在硬盘中建立一个名为Autorun.inf的文件夹，比如X:\AUTORUN.INF，然后“开始”—>“运行”—>输入"cmd"回车—》以次输入：</p>
+<pre>X:\
+
+cd autorun.inf
+
+md Estyle..\
+</pre><p>这样就生成了一个不可删除的autorun.inf文件夹，一些病毒也就不能作怪了。</p>
+<p>但是仍然不能大意，现在的病毒都会重命名Autorun.inf文件夹再生成Autorun.inf文件。所以还是不要随便双击进入U盘。先在没有中病毒的电脑下显示隐藏文件夹：打开“我的电脑”—>工具栏“工具”—>“文件夹属性”—>“查看”选项卡—>勾选 &ldquo;显示系统文件夹内容&rdquo;、&ldquo;显示所有文件和文件夹&rdquo;；取消"隐藏受保护的操作系统文件&rdquo;、&ldquo;隐藏已知文件类型的扩展名&rdquo;、。以上操作即可查看隐藏文件和文件的扩展名，建议想学习电脑的同学都按这样选择，先熟悉熟悉隐藏文件都有哪些（别乱删），若不习惯可改回。</p>
+<p>然后，我们在地址栏输入地址进入U盘，手工删除AUTORUN.INF文件，和文件夹名字一样的.exe文件，还有个RECYCLER.EXE文件，反正原来U盘里没有的，你不认得的就删了吧，如.vbs、.url、.sys为扩展名的。</p>
+<p>如果发现文件夹不能变回不隐藏的状态，将以下内容复制到一个文本文件，保存为0.bat 放到U盘根目录下双击运行即可（会跳出命令提示符对话框，直到显示 按任意键结束为止，时间可能会有点长。嫌打得麻烦，reg add的那三行可以不要）。 ——Mark</p>
+<pre>@echo off
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hidden /t reg_dword /d 1 /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t reg_dword /d 0 /f
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSuperHidden /t reg_dword /d 1 /f
+
+attrib *.* -s -r -h -a /s /d
+
+attrib * -s -r -h -a /d /s
+
+pause
+</pre><p>PS:如果是NTFS的文件格式进行以上操作后还可以：右键文件夹->属性->安全选项卡->高级->点击更改权限->取消选择“包括可从该对象的父项继承的权限”->跳出的对话框选删除->确定</p>
+</div>
+  <footer>
+    <p class="meta">
+<span class="byline author vcard">作者 <span class="fn">Mark L Ma</span></span>      
+
+
+<time datetime="2008-07-12T17:34:54+08:00" pubdate>七月 12 2008</time>
+
+<span class="categories">属于 <a class="category" href="/category/tools-and-technology/">工具技术</a>
+ 分类</span>
+
+
+<span class="categories">被贴了 <a class="tag" href="/tag/u-pan-bing-du/">u盘病毒</a>
+ 标签</span>
+    </p>
+<div class="sharing">
+  </div>
+<p>
+  <h2>相关文章</h2>
+  <ul id="related-posts-list">
+      <li class="post">
+        <a href="/2008/11/29/file-encode-bat/">文件夹加密小程序</a>
+        <div class="source right"><time datetime="2008-11-29T22:06:28">2008-11-29</time></div>
+      </li>
+      <li class="post">
+        <a href="/2009/01/17/disk-ntfs-permission/">修改移动硬盘权限保护资料</a>
+        <div class="source right"><time datetime="2009-01-17T18:23:22">2009-01-17</time></div>
+      </li>
+      <li class="post">
+        <a href="/2010/07/28/win7-exe-ico-lost/">【转自WIN7之家】Windows7 EXE图标丢失修复方法</a>
+        <div class="source right"><time datetime="2010-07-28T03:12:54">2010-07-28</time></div>
+      </li>
+      <li class="post">
+        <a href="/2010/11/13/shadow-on-desktop/">【转】桌面图标上显有阴影怎么解决</a>
+        <div class="source right"><time datetime="2010-11-13T15:23:00">2010-11-13</time></div>
+      </li>
+      <li class="post">
+        <a href="/2013/09/01/My-First-Python-Groovy-Grails/">My First Python & Groovy & Grails</a>
+        <div class="source right"><time datetime="2013-09-01T06:45:34">2013-09-01</time></div>
+      </li>
+  </ul>
+</p>    <p class="meta">
+        <a class="basic-alignment left" href="/2008/07/05/culture-humor/" title="上一篇: 摘抄：文化幽默">&laquo; 摘抄：文化幽默</a>
+        <a class="basic-alignment right" href="/2008/08/19/can-dead-speak/" title="下一篇: 摘抄：死人还能说话吗？">摘抄：死人还能说话吗？ &raquo;</a>
+    </p>
+  </footer>
+</article>
+  <section>
+    <h1>评论</h1>
+    <div id="ds-thread" class="ds-thread" data-thread-key="/2008/07/12/what-if-usb-disk-virus/" data-title="中了U盘病毒，文件夹被隐藏了或U盘打不开怎么办"></div>
+  </section>
+</div>
+<aside class="sidebar">
+
+<section>
+  <h1>分类</h1>
+  <ul id="categories">
+	<li class="category"><a href="/category/android/">Android</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/blog/">博客相关</a><span class="count right">6</span>
+	</li>
+	<li class="category"><a href="/category/database/">Database</a><span class="count right">3</span>
+	</li>
+	<li class="category"><a href="/category/experience-and-thoughts/">经历感悟</a><span class="count right">20</span>
+	</li>
+	<li class="category"><a href="/category/funny/">小品</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/groovy/">Groovy</a><span class="count right">5</span>
+	</li>
+	<li class="category"><a href="/category/health/">健康</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/j2ee/">J2EE</a><span class="count right">9</span>
+	</li>
+	<li class="category"><a href="/category/rookie-in-kitchen/">门外汉厨房入门</a><span class="count right">2</span>
+	</li>
+	<li class="category"><a href="/category/tools-and-technology/">工具技术</a><span class="count right">9</span>
+	</li>
+  </ul>
+</section>
+<section>
+  <h1>近期文章</h1>
+  <ul id="recent_posts">
+  
+  
+      <li class="post">
+        <a href="/2014/09/21/change-to-opoopress/">更换blog程序</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/16/something-about-Healthy-teeth/">拔智齿经历</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/12/new-in-kitchen-00/">门外汉厨房入门——序章（下）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/05/new-in-kitchen-0/">门外汉厨房入门——序章（上）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/01/MarkMmap2mm/">将.mmap文件转换成.mm文件的软件——MarkMmap2mm</a>
+      </li>
+  </ul>
+</section>
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/marker2337@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+</aside>
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  版权所有 &copy; 2014 - Mark L Ma -
+  <span class="credit">Powered by <a href="http://www.opoopress.com/">OpooPress</a></span>
+</p>
+</footer>
+<script type="text/javascript" src="/javascripts/opoopress.min.js"></script>
+<script language="JavaScript">
+<!--
+    window.OpooPress = new OpooPressApp({siteUrl:'http://marklma.ml',rootUrl:'',pageUrl:'/2008/07/12/what-if-usb-disk-virus/',title:'中了U盘病毒，文件夹被隐藏了或U盘打不开怎么办',refreshRelativeTimes:true,verbose:false},{});
+    OpooPress.init();
+
+
+var duoshuoQuery = {short_name:"MarkLMa"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+//-->
+</script>
+
+
+</body>
+</html>
+

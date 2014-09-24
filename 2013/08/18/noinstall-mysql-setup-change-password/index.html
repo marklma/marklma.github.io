@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="zh"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mysql noinstall 版本的安装以及修改密码 - MarkLMa's Blog</title>
+  <meta name="author" content="Mark L Ma">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="OpooPressSiteRoot" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="OpooPress-1.1.1"/>
+  <meta name="Generated" content="2014-09-24T19:05:18+08:00"/>
+  <link rel="canonical" href="/2013/08/18/noinstall-mysql-setup-change-password/">
+  
+  
+  <link href="/favicon.ico" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="MarkLMa's Blog" type="application/atom+xml">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href="//fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic|PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="/javascripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+  <!--[if lt IE 9]><script src="/javascripts/unsupported-browser.js"></script><![endif]-->
+  <header role="banner"><hgroup>
+  <h1><a href="/">MarkLMa's Blog</a></h1>
+    <h2>逝者如斯夫，不舍昼夜，so keep bloging.</h2>
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+<form action="http://wen.lu/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:http://marklma.ml" />
+    <input class="search" type="text" name="q" results="0" placeholder="搜索"/>
+  </fieldset>
+</form>
+
+<fieldset class="mobile-nav">
+  <select onchange="if (this.value) { window.location.href = this.value;}">
+    <option value="">导航&hellip;</option>
+    <option value="/">&raquo; 文章</option>
+    <option value="/archives/">&raquo; 归档</option>
+    <option value="/sample-page.html">&raquo; 示例页面</option>
+    <option value="/about/">&raquo; 关于</option>
+  </select>
+</fieldset>
+
+<ul class="main-navigation">
+<li><a href="/">文章</a></li>
+<li><a href="/archives/">归档</a></li>
+<li><a href="/sample-page.html">示例页面</a></li>
+<li><a href="/about/">关于</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+<div>
+<article class="hentry" role="article">
+  <header>
+      <h1 class="entry-title">Mysql Noinstall 版本的安装以及修改密码</h1>
+
+      <p class="meta">
+		
+
+
+<time datetime="2013-08-18T19:48:42+08:00" pubdate>八月 18 2013</time>
+         | <a href="#ds-thread">评论</a>
+      </p>
+  </header>
+
+  <div class="entry-content"><h2>安装篇</h2>
+<p>像我这种绿色软件崇拜者来说，对于有setup.exe这类软件我一般都有些许不爽，即使我知道它确实没对我的电脑干啥……</p>
+<p>像Mysql这类，我也是尽量选择绿色版安装，也就是常见的nointall版本。从http://dev.mysql.com/downloads/上下载了MySQL Community Server(免费社区版)，然后解压，比如我解压的目录就是“D:\Program Files\”然后修改软件目录为Mysql，于是我软件目录为“D:\Program Files\Mysql\”。
+安装的话可知整个地方需要修改的就是“D:\Program Files\Mysql\my.ini”，本人常年使用的如下：</p>
+<!--more-->
+<pre># Example MySQL config file for medium systems.
+#
+# This is for a system with little memory (32M - 64M) where MySQL plays
+# an important part, or systems up to 128M where MySQL is used together with
+# other programs (such as a web server)
+#
+# MySQL programs look for option files in a set of
+# locations which depend on the deployment platform.
+# You can copy this option file to one of those
+# locations. For information about these locations, see:
+# http://dev.mysql.com/doc/mysql/en/option-files.html
+#
+# In this file, you can use all long options that a program supports.
+# If you want to know which options a program supports, run the program
+# with the "--help" option.
+
+# The following options will be passed to all MySQL clients
+[client]
+#password    = your_password
+port        = 3309
+socket        = /tmp/mysql.sock
+default-character-set=gbk
+
+# Here follows entries for some specific programs
+
+# The MySQL server
+[mysqld]
+port        = 3309
+socket        = /tmp/mysql.sock
+skip-external-locking
+key_buffer_size = 16M
+max_allowed_packet = 8M
+table_open_cache = 1024
+sort_buffer_size = 512K
+net_buffer_length = 8K
+read_buffer_size = 256K
+read_rnd_buffer_size = 512K
+myisam_sort_buffer_size = 8M
+
+max_connections=1000
+default-storage-engine=innodb
+
+basedir="D:/Program Files/mysql/"
+datadir="D:/Program Files/mysql/data/"
+
+
+
+# Don't listen on a TCP/IP port at all. This can be a security enhancement,
+# if all processes that need to connect to mysqld run on the same host.
+# All interaction with mysqld must be made via Unix sockets or named pipes.
+# Note that using this option without enabling named pipes on Windows
+# (via the "enable-named-pipe" option) will render mysqld useless!
+#
+#skip-networking
+
+# Replication Master Server (default)
+# binary logging is required for replication
+log-bin=mysql-bin
+
+# binary logging format - mixed recommended
+binlog_format=mixed
+
+# required unique id between 1 and 2^32 - 1
+# defaults to 1 if master-host is not set
+# but will not function as a master if omitted
+server-id    = 1
+
+# Replication Slave (comment out master section to use this)
+#
+# To configure this host as a replication slave, you can choose between
+# two methods :
+#
+# 1) Use the CHANGE MASTER TO command (fully described in our manual) -
+#    the syntax is:
+#
+#    CHANGE MASTER TO MASTER_HOST=, MASTER_PORT=,
+#    MASTER_USER=, MASTER_PASSWORD= ;
+#
+#    where you replace , , by quoted strings and
+#    by the master's port number (3306 by default).
+#
+#    Example:
+#
+#    CHANGE MASTER TO MASTER_HOST='125.564.12.1', MASTER_PORT=3306,
+#    MASTER_USER='joe', MASTER_PASSWORD='secret';
+#
+# OR
+#
+# 2) Set the variables below. However, in case you choose this method, then
+#    start replication for the first time (even unsuccessfully, for example
+#    if you mistyped the password in master-password and the slave fails to
+#    connect), the slave will create a master.info file, and any later
+#    change in this file to the variables' values below will be ignored and
+#    overridden by the content of the master.info file, unless you shutdown
+#    the slave server, delete master.info and restart the slaver server.
+#    For that reason, you may want to leave the lines below untouched
+#    (commented) and instead use CHANGE MASTER TO (see above)
+#
+# required unique id between 2 and 2^32 - 1
+# (and different from the master)
+# defaults to 2 if master-host is set
+# but will not function as a slave if omitted
+#server-id       = 2
+#
+# The replication master for this slave - required
+#master-host     =  
+#
+# The username the slave will use for authentication when connecting
+# to the master - required
+#master-user     =  
+#
+# The password the slave will authenticate with when connecting to
+# the master - required
+#master-password =  
+#
+# The port the master is listening on.
+# optional - defaults to 3306
+#master-port     = 
+#
+# binary logging - not required for slaves, but recommended
+#log-bin=mysql-bin
+
+# Uncomment the following if you are using InnoDB tables
+#innodb_data_home_dir = D:/Program Files/Mysql/data/
+#innodb_data_file_path = ibdata1:10M:autoextend
+#innodb_log_group_home_dir = D:/Program Files/Mysql/data/
+# You can set .._buffer_pool_size up to 50 - 80 %
+# of RAM but beware of setting memory usage too high
+#innodb_buffer_pool_size = 16M
+#innodb_additional_mem_pool_size = 2M
+# Set .._log_file_size to 25 % of buffer pool size
+#innodb_log_file_size = 5M
+#innodb_log_buffer_size = 8M
+#innodb_flush_log_at_trx_commit = 1
+#innodb_lock_wait_timeout = 50
+
+[mysqldump]
+quick
+max_allowed_packet = 16M
+
+[mysql]
+no-auto-rehash
+# Remove the next comment character if you are not familiar with SQL
+#safe-updates
+default-character-set=gbk
+
+[myisamchk]
+key_buffer_size = 20M
+sort_buffer_size = 20M
+read_buffer = 2M
+write_buffer = 2M
+
+[mysqlhotcopy]
+interactive-timeout
+</pre><p>处于个人习惯，本人将端口改为了3309。有几个地方是需要注意的：一个是编码和basedir和datadir，这些都是不能写错的，而且一定要写上，否则就会出现很多错误。保存好my.ini，然后将mysql的相关目录（bin）加到对应的PATH环境变量下。加完环境变量后，所有的准备已经完成，各位可以开始安装了：
+进入cmd，进入MYSQL的BIN目录，然后输入mysqld &ndash;install，并启动服务即可，即：</p>
+<pre>C:\Windows\system32&gt;d:
+D:\&gt;cd D:\Program Files\Mysql\bin
+
+D:\Program Files\Mysql\bin&gt;mysqld --install
+Service successfully installed.
+
+D:\Program Files\Mysql\bin&gt;net start mysql
+MySQL 服务正在启动 .
+MySQL 服务已经启动成功。
+</pre><p>至此安装完毕。</p>
+<h2>修改密码篇</h2>
+<p>新装的mysql你使用root账号是可以轻松进入，并不需要密码，由于我之前安装有mysql，data目录里面的数据库是需要用户名和密码的，那么我们就需要设置一个一样的用户名密码，这样就可以同步以前的旧数据库了。
+由于没有界面只能通过操作进行了：</p>
+<pre>D:\Program Files\Mysql\bin&gt;mysqladmin -uroot -p"" password abc
+Enter password:
+D:\Program Files\Mysql\bin&gt;mysql -uroot -pabc
+mysql
+</pre><p>由于初始密码是空白，所以Enter password:直接按确定即可。这样就将root的密码改成abc了。
+然后测试一下可以登录，done!</p>
+</div>
+  <footer>
+    <p class="meta">
+<span class="byline author vcard">作者 <span class="fn">Mark L Ma</span></span>      
+
+
+<time datetime="2013-08-18T19:48:42+08:00" pubdate>八月 18 2013</time>
+
+<span class="categories">属于 <a class="category" href="/category/database/">Database</a>
+ 分类</span>
+
+
+<span class="categories">被贴了 <a class="tag" href="/tag/mysql/">mysql</a>, <a class="tag" href="/tag/my.ini/">my.ini</a>
+ 标签</span>
+    </p>
+<div class="sharing">
+  </div>
+<p>
+  <h2>相关文章</h2>
+  <ul id="related-posts-list">
+      <li class="post">
+        <a href="/2013/09/20/the-Recover-Tool-of-h2-database/">H2 Database的Recover Tool</a>
+        <div class="source right"><time datetime="2013-09-20T09:01:59">2013-09-20</time></div>
+      </li>
+      <li class="post">
+        <a href="/2012/05/28/case-when-in-HQL/">HQL中使用case When</a>
+        <div class="source right"><time datetime="2012-05-28T05:10:55">2012-05-28</time></div>
+      </li>
+  </ul>
+</p>    <p class="meta">
+        <a class="basic-alignment left" href="/2012/05/28/case-when-in-HQL/" title="上一篇: HQL中使用case when">&laquo; HQL中使用case when</a>
+        <a class="basic-alignment right" href="/2013/08/22/the-coding-of-groovy-script/" title="下一篇: Groovy脚本的编码问题">Groovy脚本的编码问题 &raquo;</a>
+    </p>
+  </footer>
+</article>
+  <section>
+    <h1>评论</h1>
+    <div id="ds-thread" class="ds-thread" data-thread-key="/2013/08/18/noinstall-mysql-setup-change-password/" data-title="Mysql noinstall 版本的安装以及修改密码"></div>
+  </section>
+</div>
+<aside class="sidebar">
+
+<section>
+  <h1>分类</h1>
+  <ul id="categories">
+	<li class="category"><a href="/category/android/">Android</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/blog/">博客相关</a><span class="count right">6</span>
+	</li>
+	<li class="category"><a href="/category/database/">Database</a><span class="count right">3</span>
+	</li>
+	<li class="category"><a href="/category/experience-and-thoughts/">经历感悟</a><span class="count right">20</span>
+	</li>
+	<li class="category"><a href="/category/funny/">小品</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/groovy/">Groovy</a><span class="count right">5</span>
+	</li>
+	<li class="category"><a href="/category/health/">健康</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/j2ee/">J2EE</a><span class="count right">9</span>
+	</li>
+	<li class="category"><a href="/category/rookie-in-kitchen/">门外汉厨房入门</a><span class="count right">2</span>
+	</li>
+	<li class="category"><a href="/category/tools-and-technology/">工具技术</a><span class="count right">9</span>
+	</li>
+  </ul>
+</section>
+<section>
+  <h1>近期文章</h1>
+  <ul id="recent_posts">
+  
+  
+      <li class="post">
+        <a href="/2014/09/21/change-to-opoopress/">更换blog程序</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/16/something-about-Healthy-teeth/">拔智齿经历</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/12/new-in-kitchen-00/">门外汉厨房入门——序章（下）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/05/new-in-kitchen-0/">门外汉厨房入门——序章（上）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/01/MarkMmap2mm/">将.mmap文件转换成.mm文件的软件——MarkMmap2mm</a>
+      </li>
+  </ul>
+</section>
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/marker2337@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+</aside>
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  版权所有 &copy; 2014 - Mark L Ma -
+  <span class="credit">Powered by <a href="http://www.opoopress.com/">OpooPress</a></span>
+</p>
+</footer>
+<script type="text/javascript" src="/javascripts/opoopress.min.js"></script>
+<script language="JavaScript">
+<!--
+    window.OpooPress = new OpooPressApp({siteUrl:'http://marklma.ml',rootUrl:'',pageUrl:'/2013/08/18/noinstall-mysql-setup-change-password/',title:'Mysql noinstall 版本的安装以及修改密码',refreshRelativeTimes:true,verbose:false},{});
+    OpooPress.init();
+
+
+var duoshuoQuery = {short_name:"MarkLMa"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+//-->
+</script>
+
+
+</body>
+</html>
+

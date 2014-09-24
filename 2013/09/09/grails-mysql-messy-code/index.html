@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="zh"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>grails和mysql乱码问题 - MarkLMa's Blog</title>
+  <meta name="author" content="Mark L Ma">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="OpooPressSiteRoot" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="OpooPress-1.1.1"/>
+  <meta name="Generated" content="2014-09-24T19:05:18+08:00"/>
+  <link rel="canonical" href="/2013/09/09/grails-mysql-messy-code/">
+  
+  
+  <link href="/favicon.ico" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="MarkLMa's Blog" type="application/atom+xml">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href="//fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic|PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="/plugins/syntax-highlighter/styles/shCoreDefault.css"/>
+  <!--[if lt IE 9]><script src="/javascripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+  <!--[if lt IE 9]><script src="/javascripts/unsupported-browser.js"></script><![endif]-->
+  <header role="banner"><hgroup>
+  <h1><a href="/">MarkLMa's Blog</a></h1>
+    <h2>逝者如斯夫，不舍昼夜，so keep bloging.</h2>
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+<form action="http://wen.lu/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:http://marklma.ml" />
+    <input class="search" type="text" name="q" results="0" placeholder="搜索"/>
+  </fieldset>
+</form>
+
+<fieldset class="mobile-nav">
+  <select onchange="if (this.value) { window.location.href = this.value;}">
+    <option value="">导航&hellip;</option>
+    <option value="/">&raquo; 文章</option>
+    <option value="/archives/">&raquo; 归档</option>
+    <option value="/sample-page.html">&raquo; 示例页面</option>
+    <option value="/about/">&raquo; 关于</option>
+  </select>
+</fieldset>
+
+<ul class="main-navigation">
+<li><a href="/">文章</a></li>
+<li><a href="/archives/">归档</a></li>
+<li><a href="/sample-page.html">示例页面</a></li>
+<li><a href="/about/">关于</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+<div>
+<article class="hentry" role="article">
+  <header>
+      <h1 class="entry-title">Grails和mysql乱码问题</h1>
+
+      <p class="meta">
+		
+
+
+<time datetime="2013-09-09T06:50:02+08:00" pubdate>九月 9 2013</time>
+         | <a href="#ds-thread">评论</a>
+      </p>
+  </header>
+
+  <div class="entry-content"><p>前几天试用grails+mysql想快速做一个页面，没想到最令人恶心的乱码又出现了，而且这次的乱码问题让我处理了半天都没处理出来，结果当我换回h2 database，发现中文正常才让我发现原来是mysql的编码问题导致的乱码。
+简单的domain:
+book.groovy</p>
+<!--more-->
+<pre class='brush:groovy'>package tes
+class Book {
+    static constraints = {}
+    String title
+    String writer
+}
+</pre><p>然后用grails generate-all tes.Book 生成对应controller、View等内容。
+修改conf/DataSource.groovy如下：</p>
+<pre class='brush:groovy'>dataSource {
+    pooled = true
+    driverClassName = "com.mysql.jdbc.Driver"
+    username = "mark"
+    password = "123"
+}
+hibernate {
+    cache.use_second_level_cache = true
+    cache.use_query_cache = true
+    cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
+}
+// environment specific settings
+environments {
+    development {
+        dataSource {
+            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            url = "jdbc:mysql://localhost:3306/bookdb?useUnicode=true&amp;characterEncoding=UTF-8"
+            }
+        }
+    }
+    test {
+        dataSource {
+            dbCreate = "update"
+            url = "jdbc:mysql://localhost:3306/bookdb?useUnicode=true&amp;characterEncoding=UTF-8"
+        }
+    }
+    production {
+        dataSource {
+            dbCreate = "update"
+            //url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+        url = "jdbc:mysql://localhost:3309/bookdb?useUnicode=true&amp;characterEncoding=UTF-8"
+            }
+        }
+    }
+}
+</pre><p>然后进入mysql建立database bookdb并授权给mark@loacalhost，脚本如下：</p>
+<pre>create database bookdb;
+</pre><p>运行grails run-app，进入http://localhost:8080/tes/book/save输入[title:&ldquo;123&rdquo;,writer"321&rdquo;]这类不含中文字符的内容没有任何异常。当开发快完毕后我想起测试一下中文愕然发现出错了！</p>
+<pre>Error 500: Internal Server Error
+
+URI
+    /tes/book/save
+Class
+    java.sql.SQLException
+Message
+    Incorrect string value: '\xE4\xB8\xAD\xE6\x96\x87' for column 'title' at row 1
+
+Around line 24 of grails-app\controllers\tes\BookController.groovy
+
+21:22:    def save() {23:        def bookInstance = new Book(params)24:        if (!bookInstance.save(flush: true)) {25:            render(view: "create", model: [bookInstance: bookInstance])26:            return27:        }
+</pre><p>由于在my.ini我设置的是gbk，配置如下：</p>
+<pre>//……
+[mysqld]
+default-character-set=gbk
+//……
+[mysql]
+default-character-set=gbk
+//……
+</pre><p>我将其改为utf8也仍旧不行，在BookController.groovy的save方法加入pringln查看错误信息，结果发现是乱码（这就是误导我一直以为是grails传参问题导致），于是在网上搜索方法，将request.setCharacterEncoding(&ldquo;utf-8&rdquo;);  response.setContentType(&ldquo;text/html;charset=utf-8&rdquo;);这类代码都写了个遍，结果发现还是未能解决，于是只能用h2 database暂时解决问题。当使用h2 database发现不存在中文问题我才确信原来是mysql乱码问题（之前也不敢相信java.sql.SQLException这个错误信息导致走了弯路）。
+经过测试，果然就是乱码问题导致，我的mysql默认建立数据库是latin1的编码，所以无法接受中文字符。正确建立数据库应该是：</p>
+<pre class='brush:sql'>CREATE DATABASE bookdb DEFAULT CHARACTER SET utf8;
+</pre><p>由于我在conf/DataSource.groovy中数据库的配置我也加上了characterEncoding=UTF-8，默认建立的表格也就默认是utf8编码的了。而且实际和my.ini中配置无关。</p>
+<h3>后记：</h3>
+<p>弯路也不白绕，接触了一下H2 DATABASE，发现确实挺好用，jdbc url配置如下：</p>
+<pre>jdbc:h2:file:d:/devDb2;MVCC=TRUE;LOCK_TIMEOUT=10000;FILE_LOCK=NO
+</pre><p>其中FILE_LOCK=NO可以不独占数据库，让dbeaver这类数据库查看软件可以实时查看数据库中信息。</p>
+</div>
+  <footer>
+    <p class="meta">
+<span class="byline author vcard">作者 <span class="fn">Mark L Ma</span></span>      
+
+
+<time datetime="2013-09-09T06:50:02+08:00" pubdate>九月 9 2013</time>
+
+<span class="categories">属于 <a class="category" href="/category/groovy/">Groovy</a>
+ 分类</span>
+
+
+<span class="categories">被贴了 <a class="tag" href="/tag/grails/">Grails</a>, <a class="tag" href="/tag/mysql/">Mysql</a>, <a class="tag" href="/tag/code/">code</a>
+ 标签</span>
+    </p>
+<div class="sharing">
+  </div>
+<p>
+  <h2>相关文章</h2>
+  <ul id="related-posts-list">
+      <li class="post">
+        <a href="/2013/09/02/Grails-Mysql-DataSource/">\[转载]Grails配置Mysql修改DataSource.groovy之后</a>
+        <div class="source right"><time datetime="2013-09-02T07:54:23">2013-09-02</time></div>
+      </li>
+      <li class="post">
+        <a href="/2013/09/03/grails-study-note-1-how-to-delele-domain-and-use-generate-all/">Grails学习笔记（1）:Grails如何删除领域，如何使用grails Generate-all</a>
+        <div class="source right"><time datetime="2013-09-03T06:49:35">2013-09-03</time></div>
+      </li>
+      <li class="post">
+        <a href="/2013/08/22/the-coding-of-groovy-script/">Groovy脚本的编码问题</a>
+        <div class="source right"><time datetime="2013-08-22T21:31:35">2013-08-22</time></div>
+      </li>
+      <li class="post">
+        <a href="/2013/10/20/groovy-ant-build/">Groovy与ANT配置</a>
+        <div class="source right"><time datetime="2013-10-20T20:52:11">2013-10-20</time></div>
+      </li>
+      <li class="post">
+        <a href="/2013/09/01/My-First-Python-Groovy-Grails/">My First Python & Groovy & Grails</a>
+        <div class="source right"><time datetime="2013-09-01T06:45:34">2013-09-01</time></div>
+      </li>
+  </ul>
+</p>    <p class="meta">
+        <a class="basic-alignment left" href="/2013/09/03/grails-study-note-1-how-to-delele-domain-and-use-generate-all/" title="上一篇: Grails学习笔记（1）:Grails如何删除领域，如何使用grails generate-all">&laquo; Grails学习笔记（1）:Grails如何删除领域，如何使用grails generate-all</a>
+        <a class="basic-alignment right" href="/2013/09/20/the-Recover-Tool-of-h2-database/" title="下一篇: h2 database的Recover Tool">h2 database的Recover Tool &raquo;</a>
+    </p>
+  </footer>
+</article>
+  <section>
+    <h1>评论</h1>
+    <div id="ds-thread" class="ds-thread" data-thread-key="/2013/09/09/grails-mysql-messy-code/" data-title="grails和mysql乱码问题"></div>
+  </section>
+</div>
+<aside class="sidebar">
+
+<section>
+  <h1>分类</h1>
+  <ul id="categories">
+	<li class="category"><a href="/category/android/">Android</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/blog/">博客相关</a><span class="count right">6</span>
+	</li>
+	<li class="category"><a href="/category/database/">Database</a><span class="count right">3</span>
+	</li>
+	<li class="category"><a href="/category/experience-and-thoughts/">经历感悟</a><span class="count right">20</span>
+	</li>
+	<li class="category"><a href="/category/funny/">小品</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/groovy/">Groovy</a><span class="count right">5</span>
+	</li>
+	<li class="category"><a href="/category/health/">健康</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/j2ee/">J2EE</a><span class="count right">9</span>
+	</li>
+	<li class="category"><a href="/category/rookie-in-kitchen/">门外汉厨房入门</a><span class="count right">2</span>
+	</li>
+	<li class="category"><a href="/category/tools-and-technology/">工具技术</a><span class="count right">9</span>
+	</li>
+  </ul>
+</section>
+<section>
+  <h1>近期文章</h1>
+  <ul id="recent_posts">
+  
+  
+      <li class="post">
+        <a href="/2014/09/21/change-to-opoopress/">更换blog程序</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/16/something-about-Healthy-teeth/">拔智齿经历</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/12/new-in-kitchen-00/">门外汉厨房入门——序章（下）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/05/new-in-kitchen-0/">门外汉厨房入门——序章（上）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/01/MarkMmap2mm/">将.mmap文件转换成.mm文件的软件——MarkMmap2mm</a>
+      </li>
+  </ul>
+</section>
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/marker2337@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+</aside>
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  版权所有 &copy; 2014 - Mark L Ma -
+  <span class="credit">Powered by <a href="http://www.opoopress.com/">OpooPress</a></span>
+</p>
+</footer>
+<script type="text/javascript" src="/javascripts/opoopress.min.js"></script>
+<script language="JavaScript">
+<!--
+    window.OpooPress = new OpooPressApp({siteUrl:'http://marklma.ml',rootUrl:'',pageUrl:'/2013/09/09/grails-mysql-messy-code/',title:'grails和mysql乱码问题',refreshRelativeTimes:true,verbose:false},{});
+    OpooPress.init();
+
+
+var duoshuoQuery = {short_name:"MarkLMa"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+//-->
+</script>
+
+<!-- START: Syntax Highlighter ComPress -->
+<script type="text/javascript" src="/plugins/syntax-highlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="/plugins/syntax-highlighter/scripts/shAutoloader.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.autoloader(
+        'applescript			/plugins/syntax-highlighter/scripts/shBrushAppleScript.js',
+        'actionscript3 as3		/plugins/syntax-highlighter/scripts/shBrushAS3.js',
+        'bash shell				/plugins/syntax-highlighter/scripts/shBrushBash.js',
+        'coldfusion cf			/plugins/syntax-highlighter/scripts/shBrushColdFusion.js',
+        'cpp c					/plugins/syntax-highlighter/scripts/shBrushCpp.js',
+        'c# c-sharp csharp		/plugins/syntax-highlighter/scripts/shBrushCSharp.js',
+        'css					/plugins/syntax-highlighter/scripts/shBrushCss.js',
+        'delphi pascal pas		/plugins/syntax-highlighter/scripts/shBrushDelphi.js',
+        'diff patch			    /plugins/syntax-highlighter/scripts/shBrushDiff.js',
+        'erl erlang				/plugins/syntax-highlighter/scripts/shBrushErlang.js',
+        'groovy					/plugins/syntax-highlighter/scripts/shBrushGroovy.js',
+        'java					/plugins/syntax-highlighter/scripts/shBrushJava.js',
+        'jfx javafx				/plugins/syntax-highlighter/scripts/shBrushJavaFX.js',
+        'js jscript javascript	/plugins/syntax-highlighter/scripts/shBrushJScript.js',
+        'perl pl				/plugins/syntax-highlighter/scripts/shBrushPerl.js',
+        'php					/plugins/syntax-highlighter/scripts/shBrushPhp.js',
+        'text plain				/plugins/syntax-highlighter/scripts/shBrushPlain.js',
+        'powershell ps          /plugins/syntax-highlighter/scripts/shBrushPowerShell.js',
+        'py python				/plugins/syntax-highlighter/scripts/shBrushPython.js',
+        'ruby rails ror rb		/plugins/syntax-highlighter/scripts/shBrushRuby.js',
+        'sass scss              /plugins/syntax-highlighter/scripts/shBrushSass.js',
+        'scala					/plugins/syntax-highlighter/scripts/shBrushScala.js',
+        'sql					/plugins/syntax-highlighter/scripts/shBrushSql.js',
+        'vb vbnet				/plugins/syntax-highlighter/scripts/shBrushVb.js',
+        'xml xhtml xslt html	/plugins/syntax-highlighter/scripts/shBrushXml.js'
+    );
+    SyntaxHighlighter.defaults['auto-links'] = false;                 
+    SyntaxHighlighter.defaults['toolbar'] = false;     
+    SyntaxHighlighter.defaults['tab-size'] = 4;
+    SyntaxHighlighter.all();
+</script>
+<!-- END: Syntax Highlighter ComPress -->
+
+</body>
+</html>
+

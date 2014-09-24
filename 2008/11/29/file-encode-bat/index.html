@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="zh"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>文件夹加密小程序 - MarkLMa's Blog</title>
+  <meta name="author" content="Mark L Ma">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="OpooPressSiteRoot" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="OpooPress-1.1.1"/>
+  <meta name="Generated" content="2014-09-24T19:05:18+08:00"/>
+  <link rel="canonical" href="/2008/11/29/file-encode-bat/">
+  
+  
+  <link href="/favicon.ico" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="MarkLMa's Blog" type="application/atom+xml">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href="//fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic|PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="/javascripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+  <!--[if lt IE 9]><script src="/javascripts/unsupported-browser.js"></script><![endif]-->
+  <header role="banner"><hgroup>
+  <h1><a href="/">MarkLMa's Blog</a></h1>
+    <h2>逝者如斯夫，不舍昼夜，so keep bloging.</h2>
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+<form action="http://wen.lu/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:http://marklma.ml" />
+    <input class="search" type="text" name="q" results="0" placeholder="搜索"/>
+  </fieldset>
+</form>
+
+<fieldset class="mobile-nav">
+  <select onchange="if (this.value) { window.location.href = this.value;}">
+    <option value="">导航&hellip;</option>
+    <option value="/">&raquo; 文章</option>
+    <option value="/archives/">&raquo; 归档</option>
+    <option value="/sample-page.html">&raquo; 示例页面</option>
+    <option value="/about/">&raquo; 关于</option>
+  </select>
+</fieldset>
+
+<ul class="main-navigation">
+<li><a href="/">文章</a></li>
+<li><a href="/archives/">归档</a></li>
+<li><a href="/sample-page.html">示例页面</a></li>
+<li><a href="/about/">关于</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+<div>
+<article class="hentry" role="article">
+  <header>
+      <h1 class="entry-title">文件夹加密小程序</h1>
+
+      <p class="meta">
+		
+
+
+<time datetime="2008-11-29T22:06:28+08:00" pubdate>十一月 29 2008</time>
+         | <a href="#ds-thread">评论</a>
+      </p>
+  </header>
+
+  <div class="entry-content"><p>用户手册：本程序只能隐藏，不能防止文件夹被删除运行本程序后会生成：加解密.bat、readme.txt 只需运行 加解密.bat输入密码即可解密，再运行 加解密.bat直接确认即可加密 VISTA下本程序不稳定，需用户自己重命名加密后的文件夹才可若重命名加密文件夹，需删除原来的 加解密.bat 自己重新用本程序生成新文件夹名应的 加解密.bat
+请将以下代码复制到记事本中，然后该名成 请将其放入你想生成隐藏文件夹的目录下.bat 运行即可</p>
+<!--more-->
+<pre>@echo off
+echo         文件加密小程序
+echo 本程序能在WINDOWS系统下生成一个新文件夹
+echo 并让该文件夹变成回收站并隐藏而起到加密作用
+echo 若不用以上方法，还有 方法二：(非VISTA系统下)
+echo 直接在您的文件夹名字后加上.{645FF040-5081-101B-9F08-00AA002F954E}
+echo 用方法二加密若想恢复直接更改文件夹名字即可
+echo.
+echo 请按任意键开始用方法一加密，否则请关闭
+pause &gt;nul
+cls
+set filename=autorun.inf
+set password=m
+set/p filename=请输入想生成的文件夹的名字,(默认文件夹名称为autorun.inf):
+set/p password=请输入能进行解密的密码(默认密码为m):
+echo 请稍后...
+echo @echo off &gt;加解密.bat
+echo set/p ma=&gt;&gt;加解密.bat
+echo if "%%ma%%"=="%password%" (goto d) &gt;&gt;加解密.bat
+echo @echo 请稍后... &gt;&gt;加解密.bat
+echo attrib -s -h -r "%filename%" /s /d &gt;&gt; 加解密.bat
+echo echo [.ShellClassInfo] ^&gt; "%filename%\desktop.ini" &gt;&gt; 加解密.bat
+echo echo CLSID={645FF040-5081-101B-9F08-00AA002F954E} ^&gt;^&gt; "%filename%\desktop.ini" &gt;&gt; 加解密.bat
+echo attrib +h +r +s "%filename%\desktop.ini" &gt;&gt; 加解密.bat
+echo attrib +r "%filename%" /s /d &gt;&gt; 加解密.bat
+echo attrib +h +s "%filename%" /s /d &gt;&gt; 加解密.bat
+echo goto end &gt;&gt; 加解密.bat
+echo :d &gt;&gt; 加解密.bat
+echo echo 请稍后... &gt;&gt;加解密.bat
+echo attrib -h -s -r "%filename%" /s /d &gt;&gt; 加解密.bat
+echo attrib -s -h "%filename%\desktop.ini" &gt;&gt; 加解密.bat
+echo del /f /q "%filename%\desktop.ini" &gt;&gt; 加解密.bat
+echo :end &gt;&gt; 加解密.bat
+echo echo OK! &gt;&gt; 加解密.bat
+md "%filename%"
+echo OK!
+echo.
+echo ！！！        注意：            ！！！
+echo 若要加密请运行 加解密.bat ，然后直接点回车
+echo 若要解密请运行 加解密.bat ，输入密码后回车
+echo         不要重命名加密文件夹，除非
+echo VISTA下显示隐藏文件发现它没变成回收站样式需自己重命名文件夹名
+echo.
+echo                         作者：Mark.L.Ma
+echo                         e-mail：4258882@163.com
+echo.
+echo 阅读完注意并放文件进文件夹后，请按确认开始加密
+attrib +r +s 加解密.bat
+call 加解密.bat
+del /f /q /a attrib.exe &gt;nul
+del /f /q /a %0 &amp;&amp; readme.txt
+</pre></div>
+  <footer>
+    <p class="meta">
+<span class="byline author vcard">作者 <span class="fn">Mark L Ma</span></span>      
+
+
+<time datetime="2008-11-29T22:06:28+08:00" pubdate>十一月 29 2008</time>
+
+<span class="categories">属于 <a class="category" href="/category/tools-and-technology/">工具技术</a>
+ 分类</span>
+
+
+<span class="categories">被贴了 <a class="tag" href="/tag/bat/">bat</a>, <a class="tag" href="/tag/yin-zang/">隐藏</a>
+ 标签</span>
+    </p>
+<div class="sharing">
+  </div>
+<p>
+  <h2>相关文章</h2>
+  <ul id="related-posts-list">
+      <li class="post">
+        <a href="/2009/01/17/disk-ntfs-permission/">修改移动硬盘权限保护资料</a>
+        <div class="source right"><time datetime="2009-01-17T18:23:22">2009-01-17</time></div>
+      </li>
+      <li class="post">
+        <a href="/2008/07/12/what-if-usb-disk-virus/">中了U盘病毒，文件夹被隐藏了或U盘打不开怎么办</a>
+        <div class="source right"><time datetime="2008-07-12T17:34:54">2008-07-12</time></div>
+      </li>
+      <li class="post">
+        <a href="/2010/07/28/win7-exe-ico-lost/">【转自WIN7之家】Windows7 EXE图标丢失修复方法</a>
+        <div class="source right"><time datetime="2010-07-28T03:12:54">2010-07-28</time></div>
+      </li>
+      <li class="post">
+        <a href="/2010/11/13/shadow-on-desktop/">【转】桌面图标上显有阴影怎么解决</a>
+        <div class="source right"><time datetime="2010-11-13T15:23:00">2010-11-13</time></div>
+      </li>
+      <li class="post">
+        <a href="/2013/09/01/My-First-Python-Groovy-Grails/">My First Python & Groovy & Grails</a>
+        <div class="source right"><time datetime="2013-09-01T06:45:34">2013-09-01</time></div>
+      </li>
+  </ul>
+</p>    <p class="meta">
+        <a class="basic-alignment left" href="/2008/10/28/let-ur-computer-be-cool/" title="上一篇: 让你电脑超爽的9条设置">&laquo; 让你电脑超爽的9条设置</a>
+        <a class="basic-alignment right" href="/2009/01/17/disk-ntfs-permission/" title="下一篇: 修改移动硬盘权限保护资料">修改移动硬盘权限保护资料 &raquo;</a>
+    </p>
+  </footer>
+</article>
+  <section>
+    <h1>评论</h1>
+    <div id="ds-thread" class="ds-thread" data-thread-key="/2008/11/29/file-encode-bat/" data-title="文件夹加密小程序"></div>
+  </section>
+</div>
+<aside class="sidebar">
+
+<section>
+  <h1>分类</h1>
+  <ul id="categories">
+	<li class="category"><a href="/category/android/">Android</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/blog/">博客相关</a><span class="count right">6</span>
+	</li>
+	<li class="category"><a href="/category/database/">Database</a><span class="count right">3</span>
+	</li>
+	<li class="category"><a href="/category/experience-and-thoughts/">经历感悟</a><span class="count right">20</span>
+	</li>
+	<li class="category"><a href="/category/funny/">小品</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/groovy/">Groovy</a><span class="count right">5</span>
+	</li>
+	<li class="category"><a href="/category/health/">健康</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/j2ee/">J2EE</a><span class="count right">9</span>
+	</li>
+	<li class="category"><a href="/category/rookie-in-kitchen/">门外汉厨房入门</a><span class="count right">2</span>
+	</li>
+	<li class="category"><a href="/category/tools-and-technology/">工具技术</a><span class="count right">9</span>
+	</li>
+  </ul>
+</section>
+<section>
+  <h1>近期文章</h1>
+  <ul id="recent_posts">
+  
+  
+      <li class="post">
+        <a href="/2014/09/21/change-to-opoopress/">更换blog程序</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/16/something-about-Healthy-teeth/">拔智齿经历</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/12/new-in-kitchen-00/">门外汉厨房入门——序章（下）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/05/new-in-kitchen-0/">门外汉厨房入门——序章（上）</a>
+      </li>
+      <li class="post">
+        <a href="/2014/09/01/MarkMmap2mm/">将.mmap文件转换成.mm文件的软件——MarkMmap2mm</a>
+      </li>
+  </ul>
+</section>
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/marker2337@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+</aside>
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  版权所有 &copy; 2014 - Mark L Ma -
+  <span class="credit">Powered by <a href="http://www.opoopress.com/">OpooPress</a></span>
+</p>
+</footer>
+<script type="text/javascript" src="/javascripts/opoopress.min.js"></script>
+<script language="JavaScript">
+<!--
+    window.OpooPress = new OpooPressApp({siteUrl:'http://marklma.ml',rootUrl:'',pageUrl:'/2008/11/29/file-encode-bat/',title:'文件夹加密小程序',refreshRelativeTimes:true,verbose:false},{});
+    OpooPress.init();
+
+
+var duoshuoQuery = {short_name:"MarkLMa"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+//-->
+</script>
+
+
+</body>
+</html>
+
