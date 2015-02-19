@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[MarkLMa's Blog]]></title>
-  <link href="http://marklma.ml/atom.xml" rel="self"/>
-  <link href="http://marklma.ml/"/>
-  <updated>2014-09-24T22:42:09+08:00</updated>
-  <id>http://marklma.ml/</id>
+  <title><![CDATA[MarkLMa's 的随笔小屋]]></title>
+  <link href="http://marklma.ga/atom.xml" rel="self"/>
+  <link href="http://marklma.ga/"/>
+  <updated>2015-02-19T13:12:32+08:00</updated>
+  <id>http://marklma.ga/</id>
   <author>
     <name><![CDATA[Mark L Ma]]></name>
     
@@ -12,173 +12,231 @@
   <generator uri="http://press.opoo.org/">OpooPress</generator>
 
   <entry>
+    <title type="html"><![CDATA[伪宅的漫画推荐 - 5]]></title>
+    <link href="http://marklma.ga/2015/02/19/mark-comic-recommendation-5/"/>
+    <updated>2015-02-19T11:58:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2015/02/19/mark-comic-recommendation-5/</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
+<p>正值新春佳节打年初一，除了给各位拜年，本篇也分享一些应景的的漫画吧。</p>
+<p>说到春节回家省亲可能会是七大姑八大姨围攻自己另一半的问题，例如什么时候带回家过年呀之类。笔者还未能达到该境界，为了……（请自行脑补原因），笔者决定本期分享温馨、纯爱类漫画……</p>
+<p>虽然看到前几篇内容读者可能认为笔者看的漫画都是一些变态、杀戮、打斗类的，但是实际上笔者仔细看看自己的收藏，笔者看了很多这类漫画……甚至是<strong>纯爱少女漫画</strong>（捂脸）！！！虽然没看过漫画，但是笔者曾怀着不砸烂屏幕的冲动看完了王道少女动画《好像告诉你》…… 算了，就不说黑历史了，进入正题吧！</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[伪宅的漫画推荐 - 4]]></title>
+    <link href="http://marklma.ga/2015/02/11/mark-comic-recommendation-4/"/>
+    <updated>2015-02-11T23:30:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2015/02/11/mark-comic-recommendation-4/</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
+<p>之前系列中有说过，我比较喜欢科普类的动漫，因为感觉可以既休闲又娱乐。像食梦者可以看看漫画家的生活，像天籁之音（好孩子看不懂的哦）可以看看galgame厂家和声优的工作，即使是虚构的也可以感受一下。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[伪宅的漫画推荐 - 3]]></title>
+    <link href="http://marklma.ga/2015/02/11/mark-comic-recommendation-3/"/>
+    <updated>2015-02-11T00:20:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2015/02/11/mark-comic-recommendation-3/</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
+<p>上一篇推荐中最后一个是搞笑类，且不是强推的漫画，原因实际主要是为了过渡到今天要推荐的幽默类漫画中。仔细回顾了一下自己观看过的幽默类漫画似乎不是很多，可能是因为笔者笑点略高，看来只有隐晦无节操类的笑话才能给我的笑点来一个会心一击，所以著名搞笑漫画中的只有类似<strong>银魂</strong>、<strong>妄想学生会</strong>之流才能深得吾意。不过既然要推荐偏门一些的，银魂和妄想学生会就不做特别推荐了。首先推荐的就是：</p>
+<h2>GRANDBLUE</h2>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[伪宅的漫画推荐 - 2]]></title>
+    <link href="http://marklma.ga/2015/02/07/mark-comic-recommendation-2/"/>
+    <updated>2015-02-07T23:20:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2015/02/07/mark-comic-recommendation-2/</id>
+    <content type="html"><![CDATA[<h2>MURCIELAGO-蝙蝠</h2>
+<p>![红守][1]</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[伪宅的漫画推荐 - 1]]></title>
+    <link href="http://marklma.ga/2015/02/02/mark-comic-recommendation-1/"/>
+    <updated>2015-02-02T00:53:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2015/02/02/mark-comic-recommendation-1/</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
+<p>可能有人会想居然堂而皇之地将动漫内容列入阅读笔记，真是罪过。不过漫画作为一个重要的文化传播工具，休闲娱乐好方案，看动漫N年且自封为伪宅的我怎么能不介绍一下近期欣赏的一些漫画。</p>
+<p>在这里不得不先说一声，笔者的欣赏方面可能不那么大众，要不然怎么有个“伪”呢？举个栗子，对于三大民工漫画，笔者最喜欢的既不是日本本土最有人气的《海贼王》也不是国外最高人气的《火影》，而是《死神》。因为《死神》的画风凌厉简洁，刻画的人物性格各异，剧情热血，种种因素让我爱不释手。说这些主要意思是笔者要简要推荐一些符合笔者口味的漫画，而不是各种排行榜榜上有名的著名漫画，争取在不做任何剧透，仅仅是简要带过的话语中传播我的动漫审美观……不过还是不得不先吐槽一下，最近的漫画越来越“卖肉”了，对于有趣的剧情反倒是疏忽了很多，这让笔者颇为郁闷……总之本文力争推荐的是笔者觉得内容有趣的漫画，而非福利多而的吸引人的漫画。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[学习bootstrap之思维导图]]></title>
+    <link href="http://marklma.ga/2015/01/22/mindmap-of-studying-bootstrap/"/>
+    <updated>2015-01-22T22:56:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2015/01/22/mindmap-of-studying-bootstrap/</id>
+    <content type="html"><![CDATA[<p>说起来好久没有写博客了，特别是技术类博客。但是近期没有折腾什么特别的事情，为了keep bloging，还是炒炒旧饭，把以前学习bootstrap的思维导图拿出来吧。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[《小强升职记》之思维导图]]></title>
+    <link href="http://marklma.ga/2015/01/08/xiaoqiangshengzhiji/"/>
+    <updated>2015-01-08T00:34:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2015/01/08/xiaoqiangshengzhiji/</id>
+    <content type="html"><![CDATA[<p>在[之前的文章中][1]我就提到了思维导图，虽然思维导图看上去十分简单，没什么特别的功能，但是实际使用起来就会发现它对于内容或思绪的整理性很强。本来一直打算花一整篇博文来专门介绍思维导图，但是网上思维导图教程不少，于是还是决定直接展现一个读书笔记的思维导图来作为介绍更好，这样更形象生动。</p>
+<p>在之前阅读的时间管理书籍中，《小强升职记》算是一本十分优秀的书籍。当时我阅读时候就忍不住要做笔记，将自己觉得有用的地方记录下来，以便日后应用。以下就是之前读书时候整理的思维导图，其中由于后章是作者没有公布在博客里的，没有原文，也担心写出来有什么别的问题，于是我就只整理了前几章网上可找到的内容。其中使用的软件是freeplane。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[减脂锻炼阶段日志4]]></title>
+    <link href="http://marklma.ga/2014/12/31/fitness-log4/"/>
+    <updated>2014-12-31T00:05:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/12/31/fitness-log4/</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
+<p>锻炼减脂至今已第十周，现阶段状况是减了5kg，其中比较郁闷的是第七第八周分别是大吃大喝一周只运动一次+生病一周没运动，那两周全废了，经过后两周弥补才补回之前减的量。</p>
+<p>从第六周开始我逐渐调整锻炼方案，渐渐增加塑形内容，即力量训练内容，减少有氧运动，想着从提高身体肌肉含量，增加基础代谢，目前看来好像锻炼方向没有偏差太大。现阶段我的BMI恢复到了正常范围，终于达到了入职前的体重，腰围又减少了1cm。看看再坚持一下这个方向是否正确。以下是我自己定制的锻炼方案，个人感觉比较适合已有一些运动基础，BMI为23左右想继续减脂的人，方案完全无器械。方案中相关英文可以查看：http://pan.baidu.com/s/1mgMHK84，一些视频资料见：http://i.youku.com/u/UNTYwNTUyODQ4/custom/mid/15 中的四分钟快速家庭减肥瘦身(一、二、胸背部、腹肌篇)，软件还是之前推荐的那些：每日锻炼免费版、拉古健身，额外增加一款FitTime用来记时tabata。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Linux Mint下SublimeText的中文输入法问题]]></title>
+    <link href="http://marklma.ga/2014/11/29/sublime-text-3065-in-mint/"/>
+    <updated>2014-11-29T20:15:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/11/29/sublime-text-3065-in-mint/</id>
+    <content type="html"><![CDATA[<p>[SublimeText][1]是一款很美好优雅的文本编辑器，虽然它很久没更新了，但是瑕不掩瑜，它的优点还是十分多的，我这里就不多介绍了。近期我将本本的操作系统转成了Linux Mint，结果发现在Mint下的SublimeText完全没法使用中文输入法。网上有很多SublimeText在Linux下无法使用的问题，结果我逐一尝试均未遂。不得已还网上找了一个替代文本编辑器[Atom][2]来试用，别说Atom用起来还不错，不过不兼容XP，而且插件不够全面完备，看来还是得攻克一下SublimeText的中文问题。</p>
+<p>功夫不负有心人，[Linux Mint贴吧][3]吧主帮了个忙，[他的一套解决方案][4]成功解救了我，这里和大家分享一下。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[安装LinuxMint之后]]></title>
+    <link href="http://marklma.ga/2014/11/23/after-installing-linux-mint/"/>
+    <updated>2014-11-23T13:26:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/11/23/after-installing-linux-mint/</id>
+    <content type="html"><![CDATA[<p>近段时期一直在使用Linux Mint操作系统，折腾了那么久，还是有一两个问题没解决，不过先记录下一些安装之后的操作，以便日后更换系统备用。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Mark料理教程第一季第一集]]></title>
+    <link href="http://marklma.ga/2014/11/17/devil-cooking1/"/>
+    <updated>2014-11-17T23:17:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/11/17/devil-cooking1/</id>
+    <content type="html"><![CDATA[<p>上一次在QQ和微信上发布了自己尝试的[整个番茄饭][1]</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[(initramfs) Unable to Find a Medium Containing a Live File System]]></title>
+    <link href="http://marklma.ga/2014/11/15/initramfs-error-in-ubuntu/"/>
+    <updated>2014-11-15T23:15:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/11/15/initramfs-error-in-ubuntu/</id>
+    <content type="html"><![CDATA[<p>笔者两台本本在使用U盘安装Linux的时候都遇到过initramfs这个问题，出现问题多半是安装Ubuntu或者其嫡系版本，如Deepin、Ubuntu、Linux Mint等。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[又用Linux]]></title>
+    <link href="http://marklma.ga/2014/11/11/linux-again/"/>
+    <updated>2014-11-11T23:15:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/11/11/linux-again/</id>
+    <content type="html"><![CDATA[<p>折腾之神再次附身，我再次对着自己的电脑折腾起来——这次折腾的有是自己电脑的操作系统。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[我也说锻炼]]></title>
+    <link href="http://marklma.ga/2014/11/01/i-want-to-lose-weight-too/"/>
+    <updated>2014-11-01T00:32:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/11/01/i-want-to-lose-weight-too/</id>
+    <content type="html"><![CDATA[<p>本来这篇日志的名字是我也谈减肥来着，但是想想实在是不好意思直接在标题就写出减肥二字，而且减肥包括饮食和锻炼，但是饮食方面实施实在是一团糟，所以最后还是定了锻炼这个标题。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[我想让年轻人学些什么额外技能]]></title>
+    <link href="http://marklma.ga/2014/10/30/what-i-want-the-young-to-do/"/>
+    <updated>2014-10-30T21:17:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/10/30/what-i-want-the-young-to-do/</id>
+    <content type="html"><![CDATA[<p>先对一直想写这个题目的我自行吐槽一阵：我很老么？很有资历么？阅历很丰富么？很成功么？很牛X么？很一帆风顺么？……</p>
+<p>自我吐槽完了，我竟无言以对。真想就别TMD丢人现眼了，看看近期才出来的“屌丝”标准，我才TMD刚够格呀，有啥资格写这个题目。但是依旧按捺不住好为人师的个性以及发现好东西就像拿出来和大家分享一把的冲动。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[我为什么写博客]]></title>
+    <link href="http://marklma.ga/2014/10/27/why-do-i-keep-bloging/"/>
+    <updated>2014-10-27T21:22:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/10/27/why-do-i-keep-bloging/</id>
+    <content type="html"><![CDATA[<p>我现在博客的小标题是“逝者如斯夫，不舍昼夜，so keep bloging”。说实话要keep bloging还真不简单，甚至说写一篇博文都不简单。比如选材、构思等，我至今还是觉得我现在自己搭建的这个博客算是废了，因为它更像是我的日志或者随笔，而不是一个合格的“博客”。那么问题就来了，既然那么麻烦，我这么一个懒人，以前连日记都不记的人，为什么突然要写博客？</p>
+<!--More-->
+<h2>起因</h2>
+<p>话说因为有一段时间不更新博客了，除了时间上安排没做好（说白了就是懒）之外，还有一个原因就是没想好写什么。这几天在考虑要写什么的时候，我突然想我为什么要写博客？在之前的博文里，也就是<a href="http://marklma.ga/2014/08/03/Use-Markdown/">推荐markdown</a>那一篇文章，我也只是有一个模糊的冲动，想要keep bloging，但是实际上细细想来更多的是头脑发热想要去做这件事的感觉，没经过什么深入考虑。于是我决定认真思考，问自己：我为什么要写博客？</p>
+<h2>为什么不想写</h2>
+<p>事物分两面看，先来看我为什么不想写博客，或者说<strong>除了懒</strong>我自己究竟为什么不想写博客。</p>
+<h3>安全感</h3>
+<p>首先，这和为什么不写日记（除了作业外）的原因一样，主要是担心隐私或者个人信息的暴露，网络的开放性给我带来极大不安全感。这可能是由于从小看了不少阴谋论的电视或者电影？反正总感觉通过分析这个人的相关文字或者材料可以彻底分析一个人，比如破解个人密码等，然后可以预测这个人的动向，并使用这些材料分析他的弱点，在未来的博弈中有针对地制定策略来击败这个人，所以有关自己的信息暴露得越少越好，自己知道的内容深埋心中就行了。这种想法至今也有，看来我的网络安全感还是挺低的。。。</p>
+<h3>写作能力低下</h3>
+<p>想想可能是由于抵触从小写日记导致我自己语文作文水平也不行，写作能力不足也是一个不想写博客的原因，写出来的东西乱七八糟，没有条理，正如本文一样。</p>
+<h3>时间成本</h3>
+<p>时间不够是也一个问题，以前是想玩的时间都不够，现在是想休闲的时间都不够，哪还去抽一段不算太短的时间写博客呢。而且自己写出来的东西当然也希望是好东西，而一篇好的博文是通过不断修改而成的，对于我这种什么事情都想一劳永逸的人，花时间维护也让我感到疲倦。</p>
+<h3>担心错误</h3>
+<p>身为伪程序员，曾认为这个世界不是0就是1，既然曾有这种极端思想，当然希望自己写出来的东西是正确的，甚至是绝对正确的，因为只有绝对正确才能让我一劳永逸。有这种思想写文章当然找不到方向，下不了笔，担心如果写出来的东西不对，万一误导了读者，这就悲催了。</p>
+<h3>资历浅/选题难</h3>
+<p>下不了笔、找不到可写或者想写的题材的原因还有阅读量小、经历少、资历浅，担心自己写出来的东西实际上就是让人贻笑大方的玩意儿。我的神经不够坚韧，有些在意自己思考的内容暴露在公众之下的结果。</p>
+<h2>为什么想写</h2>
+<p>说完不想写的几个原因之后，来谈谈为啥最后我还是开始写博文了。除了客服了之前不想写的一些负面思想外，还有一些其它想法，最终让我立志keep bloging。</p>
+<h3>喜欢灌输个人价值观</h3>
+<p>看之前的博文，大概可以发现有不少教程。这就是其中一个原因，本人好为人师，或者说是喜欢将自己的价值观灌输给他人，同化他人。写博客，特别是写技术博客，也算是教授他人的一个途径，这让我很有一些成就感，而且教学的过程往往也是巩固和提升自己原先学习内容的一个很好的途径，何乐而不为。</p>
+<h3>喜欢搭积木</h3>
+<p>好比编程，学好编程语言之后，逐步按照自己想法拼凑出一个成果，这就像喜欢玩积木的小孩，按照说明一步步组装自己的玩具，这过程对我来说就是一个休闲运动。而且好不容易按照说明书一步步搭建起了自己的博客，不用起来岂不是浪费心血。</p>
+<h3>沉淀、思考</h3>
+<p>正如之前在<a href="http://marklma.ga/2014/08/03/Use-Markdown/">Markdown的文章</a>里说的：读书使人充实，讨论使人机敏，写作使人精确。将东西写下来实际上是一个整理思考的过程，现在这个越来越少使用笔的时代，静下心来写作的时间就是总结思考的时间，而且有的时候只是单纯地空想可能始终找不到出路，而尝试将问题写下来自己看看，可能会有额外的收获。写作实际上也可以看成和自己对话的一个手段或方式，让你自己更了解自己的想法，让你自己更坚定自己的信念。</p>
+<h3>记录</h3>
+<p>以前一直认为我的记忆很好，不需要日记去督促，一切我都记下来了，记忆是我人格的一个部分。但是现实就是残酷的，好记忆不如烂笔头的真理颠破不变，很有可能一些年轻时候很有趣的想法经历经过时间的洗礼就渐渐淡忘了，不把他们记下来就是会忘记。而如果你将这些人生片段，所思所想记录下来，试想40年后，你讲这些文字记录翻出来看，是否会勾起自己美好的回忆呢？</p>
+<p>除了记录人生经历和所思所想，将自己学习的内容记录下来，也可以很方便查询和复习。而且独乐乐不如众乐乐，将这些知识记录下来并分享给大家也是好事一件。</p>
+<h3>交友</h3>
+<p>记录自己的思想，并分享给众人。这样万一看到的读者是志同道合之人，这样就轻松得到一个知己，岂不快哉！</p>
+<h3>虚荣心/利益心</h3>
+<p>人是趋利的动物。想想万一啥时候我突然写了个东西火了呢？到时候我就会升职加薪、当上总经理、出任CEO、迎娶白富美、走上人生巅峰，想想还有点小激动。虽然至今还没想到我写的这堆破玩意儿究竟怎么盈利……</p>
+<h2>综上所述</h2>
+<p>这些就是我为啥以及为啥不写博客的原因。经过思想的逐渐变化，想写博客的天使们最终压制了不想写的天使们……所以最终就生成了我的博客。</p>
+<p>不过在思考我为什么写博客这个问题的时候，新的问题闪过脑际，那就是我自己搭建的博客还真是四不像，想想是不是时候好好整理一下，不应该将个人经历啥的一堆莫名其妙的东西都堆进来，而且安全感啥的也还是存在，日志或者日记什么的就应该换个地方抒发，自个儿瞅瞅就好，不用拿出来给大伙儿现眼。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[三里图片第一弹——乡下也疯狂]]></title>
+    <link href="http://marklma.ga/2014/10/18/some-pic-in-sanli1/"/>
+    <updated>2014-10-18T19:55:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/10/18/some-pic-in-sanli1/</id>
+    <content type="html"><![CDATA[<p>可能需要一点二次元知识才看得懂……</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[谈解酒等问题]]></title>
+    <link href="http://marklma.ga/2014/10/08/drinking-notice/"/>
+    <updated>2014-10-08T00:14:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/10/08/drinking-notice/</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
+<p>身为伪技术宅男，一般来说都不大可能喜欢饮酒。酒喝多了伤身，但是有时候可是不喝又不行。刚转到前端后第一周我就深刻认识到需要去找一些解酒偏方了，不过由于种种原因<em>（实际就是懒）</em>拖到这几天才去网上搜相关内容。由于网上谣言众多，为了靠谱，我只从<a href="http://guokr.com/">果壳网</a>、<a href="http://songshuhui.net/">科学松鼠会</a>以及网上有来源的几篇文章中进行查找，结果找到的几个靠谱的结果都让我失望至极：</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[marklma-opoopress-theme]]></title>
+    <link href="http://marklma.ga/2014/10/01/marklma-opoopress-theme/"/>
+    <updated>2014-10-01T19:08:00+08:00</updated>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/10/01/marklma-opoopress-theme/</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
+<p>正如<a href="http://marklma.ga/2014/09/21/change-to-opoopress/">上一篇</a>日志所说，我换了一个换博客生成器，由于这次选择的博客生成器较为小众，是<a href="http://www.opoopress.com/">OpooPress</a>，所以对于主题的选择不得不自己折腾，所以现在折腾出了这个<a href="https://github.com/marklma/marklma-opoopress-theme">marklma-opoopress-theme</a>，欢迎围观。</p>
+]]></content>
+  </entry>
+  <entry>
     <title type="html"><![CDATA[更换blog程序]]></title>
-    <link href="http://marklma.ml/2014/09/21/change-to-opoopress/"/>
+    <link href="http://marklma.ga/2014/09/21/change-to-opoopress/"/>
     <updated>2014-09-21T22:43:00+08:00</updated>
-    <id>http://marklma.ml/2014/09/21/change-to-opoopress/</id>
+	<published>2015-02-19T13:12:32+08:00</published>
+    <id>http://marklma.ga/2014/09/21/change-to-opoopress/</id>
     <content type="html"><![CDATA[身为“不折腾会死星人”，我果然又开始折腾更换一个blog程序了。]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[拔智齿经历]]></title>
-    <link href="http://marklma.ml/2014/09/16/something-about-Healthy-teeth/"/>
-    <updated>2014-09-16T22:54:00+08:00</updated>
-    <id>http://marklma.ml/2014/09/16/something-about-Healthy-teeth/</id>
-    <content type="html"><![CDATA[2014/9/13日拔右侧智齿]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[门外汉厨房入门——序章（下）]]></title>
-    <link href="http://marklma.ml/2014/09/12/new-in-kitchen-00/"/>
-    <updated>2014-09-12T20:41:46+08:00</updated>
-    <id>http://marklma.ml/2014/09/12/new-in-kitchen-00/</id>
-    <content type="html"><![CDATA[<h3>第一盘可以认可的菜——芹菜炒肉</h3>
-<p>接<a href="http://baike.baidu.com/view/91922.htm?fr=aladdin">上篇</a>，我逐渐在后续的“烹饪实验”中找到了感觉，但还是由于懒的缘故，没有花大段时间去查资料研究怎么炒菜，虽然不符合我平时的作风，但偶尔还是完全依靠感觉来学习也是不错的经验。经过之前的“历练”，我大概总结了我自己炒菜的步骤：</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[门外汉厨房入门——序章（上）]]></title>
-    <link href="http://marklma.ml/2014/09/05/new-in-kitchen-0/"/>
-    <updated>2014-09-05T06:39:25+08:00</updated>
-    <id>http://marklma.ml/2014/09/05/new-in-kitchen-0/</id>
-    <content type="html"><![CDATA[<h3>前言</h3>
-<p>果然只有独自一人，没有饭堂、没人帮做饭菜这种条件下才会让我决心学做饭。想想高中大学都是住学校，由于有学校饭堂的存在，而且我又不挑食，所以在所谓“家务”的技能树中，应该除了“烹饪”技能几乎没有点之外，应该都有做过了。</p>
-<p>来到基层任职后，独自住在大院里，大院里有个厨房，厨房里设备算是勉强齐全，可以借着这些平台开始我的“烹饪实验”。</p>
-<p>做什么都得先有个目标，我学做菜的目标很简单：做出来的东西能吃、无害、别人吃了不说很难吃。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[将.mmap文件转换成.mm文件的软件——MarkMmap2mm]]></title>
-    <link href="http://marklma.ml/2014/09/01/MarkMmap2mm/"/>
-    <updated>2014-09-01T07:17:09+08:00</updated>
-    <id>http://marklma.ml/2014/09/01/MarkMmap2mm/</id>
-    <content type="html"><![CDATA[.mmap file convert to .mm file (java version)]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[三里生活感想]]></title>
-    <link href="http://marklma.ml/2014/08/16/live-in-sanli/"/>
-    <updated>2014-08-16T04:36:49+08:00</updated>
-    <id>http://marklma.ml/2014/08/16/live-in-sanli/</id>
-    <content type="html"><![CDATA[<p>因为我一直不会煮菜做饭，而且来到三里后独自居住，我就更觉得自己有必要趁此机会学习查下煮菜做饭了。</p>
-<p>《交响情人梦》里，男主角和女主角的老师都会料理，而且喜欢研究，但是我发觉我比较像剧中的孙蕊，做好饮食健康搭配即可，无视味道，煮菜做饭这种感觉就是浪费时间。但是来到三里独自居住后，想想这也好歹是个生活常识，也想是不是正好趁此机会学习学习料理，哦不，煮菜做饭呢。不过，我发现我很难学会煮饭，因为我对于食物没有什么追求，我发现我对食物的可接受范围太广了，而且好吃不好吃这种感觉差距不是特别大。我尝试去煮了道菜，吃下去完全无法判定这道菜对于他人吃起来是好吃还是不好吃，我极度怀疑我煮东西的话，那玩意是否煮熟了我都无法区分。当然这并不是类似《文学少女》里的女主角那种失味症，而是过于不挑食吧（类似贝爷？）。</p>
-<p>对于学习厨艺，我以前一直在想，搞一个<strong>一栈式生活毕业培训班</strong>：</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[三里任职随笔]]></title>
-    <link href="http://marklma.ml/2014/08/15/settle-in-sanli/"/>
-    <updated>2014-08-15T07:41:38+08:00</updated>
-    <id>http://marklma.ml/2014/08/15/settle-in-sanli/</id>
-    <content type="html"><![CDATA[<p>不得不吐槽一下，我似乎距离我喜欢的生活越来越远呢。我是科技崇尚派，我喜欢享受科技带来的便利，所以我似乎不太喜欢游山玩水（当然也可能是懒、宅，或者山水看多了？），旅游我更愿意看城市、看人文。感觉在大城市从事IT相关工作这应该是我所设想的生活吧。但是毕业后我放弃了在一线城市任职选择跑回老家——二线城市南宁。任职三年至今，我又突发奇想跑到了农村支局任职，而且不是从事后端技术维护工作，而是转而从事市场前端工作。虽说我自己认为自己做什么都有可能，也有着相关的心里准备，但是回看内心向往的生活以及毕业后的任职经历，我自己也诧异不已。</p>
-<p>我的选择正确吗？也许这是一种曲线救国？体验一下心理舒适区以外的世界是否能让我更成熟？种种疑问也许只有时间才能解答。</p>
-<p>感叹完毕，写一下初到农村支局的一些见闻感触吧。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[一款hexo主题]]></title>
-    <link href="http://marklma.ml/2014/08/11/hexo-theme-marklma/"/>
-    <updated>2014-08-11T01:34:07+08:00</updated>
-    <id>http://marklma.ml/2014/08/11/hexo-theme-marklma/</id>
-    <content type="html"><![CDATA[基于[Hexo]主题[chenall V2.2](https://github.com/chenall/hexo-theme-chenall)修改而成,未在主要功能上做相关改动,仅仅增加一些小插件以及按照自己想法*美化*主题.]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[我的博客自定义tk域名经历]]></title>
-    <link href="http://marklma.ml/2014/08/06/My-Blog-Domain-2/"/>
-    <updated>2014-08-06T00:19:04+08:00</updated>
-    <id>http://marklma.ml/2014/08/06/My-Blog-Domain-2/</id>
-    <content type="html"><![CDATA[申请tk、ga和ml域名的几个注意事项。]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[使用Markdown书写感慨]]></title>
-    <link href="http://marklma.ml/2014/08/04/Use-Markdown/"/>
-    <updated>2014-08-04T03:57:39+08:00</updated>
-    <id>http://marklma.ml/2014/08/04/Use-Markdown/</id>
-    <content type="html"><![CDATA[使用Markdown写作能让我这个懒人也喜欢上写blog。]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[我的博客自定义二级域名经历]]></title>
-    <link href="http://marklma.ml/2014/08/02/My-Blog-Domain-1/"/>
-    <updated>2014-08-02T08:08:00+08:00</updated>
-    <id>http://marklma.ml/2014/08/02/My-Blog-Domain-1/</id>
-    <content type="html"><![CDATA[本博客第一个域名，虽然是二级域名，但是申请到使用的过程也是一路磕磕碰碰。]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://marklma.ml/2014/07/31/MyFirstBlog/"/>
-    <updated>2014-07-31T07:48:05+08:00</updated>
-    <id>http://marklma.ml/2014/07/31/MyFirstBlog/</id>
-    <content type="html"><![CDATA[为了自己第一个自建blog的折腾记录。]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[正则表达式的力量-2：运营商运用案例]]></title>
-    <link href="http://marklma.ml/2014/03/20/The-power-of-Regular-Expression-2/"/>
-    <updated>2014-03-20T22:55:15+08:00</updated>
-    <id>http://marklma.ml/2014/03/20/The-power-of-Regular-Expression-2/</id>
-    <content type="html"><![CDATA[<p>以实际工作为例，运营商后端人员往往需要处理一些批量任务，会有IP、端口等信息，看看我们怎么批量处理这些信息为想要的结果。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[正则表达式的力量-1]]></title>
-    <link href="http://marklma.ml/2013/12/04/The-power-of-Regular-Expression-1/"/>
-    <updated>2013-12-04T06:12:11+08:00</updated>
-    <id>http://marklma.ml/2013/12/04/The-power-of-Regular-Expression-1/</id>
-    <content type="html"><![CDATA[<p>不管是什么工作，只要这个工作涉及到EXCEL等批量内容，我觉得学习一下<strong>正则表达式</strong>就是好的，它可以帮助你减轻一些批量工作。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Groovy与ANT配置]]></title>
-    <link href="http://marklma.ml/2013/10/20/groovy-ant-build/"/>
-    <updated>2013-10-20T20:52:11+08:00</updated>
-    <id>http://marklma.ml/2013/10/20/groovy-ant-build/</id>
-    <content type="html"><![CDATA[<p>捎带手学习了一下如何使用ANT，尝试了gradle，发现功能貌似过于强大，而且编译啥的好像可以集成ANT来使用，于是决定<strong>先</strong>学习使用常见的构建工具ant。本文中使用的环境是：
-Groovy Version: 2.1.7 JVM: 1.7.0_40 Vendor: Oracle Corporation OS: Windows 7 Apache Ant&trade; version 1.9.2
-log4j-1.2.17：放在\anttest\lib目录下，工程目录为\anttest\</p>
-<p>ant配置文件：
-\anttest\build.xml</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[h2 database的Recover Tool]]></title>
-    <link href="http://marklma.ml/2013/09/20/the-Recover-Tool-of-h2-database/"/>
-    <updated>2013-09-20T09:01:59+08:00</updated>
-    <id>http://marklma.ml/2013/09/20/the-Recover-Tool-of-h2-database/</id>
-    <content type="html"><![CDATA[<p>前段时间做的一个grails页面在服务器重启后突然挂了，TOMCAT跑不起来，各种报错，正好赶上近期Grails升级到了Grails-2.3.0版本，于是先尝试使用Grails-2.3.0，结果升级后试用结果各种碰壁，为了解决Grails2.3.0的问题，将Groovy升级到了2.1.7，将JDK改用了1.7，将所有路径改成了没有空格的，修改各种PATH、CLASSPATH，结果无功而返，不是缺少这就是缺少那，最后实在没辙了还是改用回了Grails-2.2.4。结果居然还是报错！但是新建项目没问题，而是旧项目出现了问题，纠结了半天才想到，是不是那个著名的“内存数据库”挂了。</p>
-<p>经过测试果不其然，确实是数据库挂了。想想数据库总有恢复功能吧，网上找了一下，没啥中文说明，最后还是在官方页面找到了解决方法。在此记录下方法：</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[grails和mysql乱码问题]]></title>
-    <link href="http://marklma.ml/2013/09/09/grails-mysql-messy-code/"/>
-    <updated>2013-09-09T06:50:02+08:00</updated>
-    <id>http://marklma.ml/2013/09/09/grails-mysql-messy-code/</id>
-    <content type="html"><![CDATA[<p>前几天试用grails+mysql想快速做一个页面，没想到最令人恶心的乱码又出现了，而且这次的乱码问题让我处理了半天都没处理出来，结果当我换回h2 database，发现中文正常才让我发现原来是mysql的编码问题导致的乱码。
-简单的domain:
-book.groovy</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Grails学习笔记（1）:Grails如何删除领域，如何使用grails generate-all]]></title>
-    <link href="http://marklma.ml/2013/09/03/grails-study-note-1-how-to-delele-domain-and-use-generate-all/"/>
-    <updated>2013-09-03T06:49:35+08:00</updated>
-    <id>http://marklma.ml/2013/09/03/grails-study-note-1-how-to-delele-domain-and-use-generate-all/</id>
-    <content type="html"><![CDATA[<pre>grails create-app racetrack
-grails create-domain-class Race
-grails create-controller-class Race
-</pre>]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[\[转载]Grails配置Mysql修改DataSource.groovy之后]]></title>
-    <link href="http://marklma.ml/2013/09/02/Grails-Mysql-DataSource/"/>
-    <updated>2013-09-02T07:54:23+08:00</updated>
-    <id>http://marklma.ml/2013/09/02/Grails-Mysql-DataSource/</id>
-    <content type="html"><![CDATA[<p>研究了半天，没想到是这个问题……</p>
-<p>原文地址：<a href="http://blog.sina.com.cn/s/blog_6d10ca65010153pw.html">Grails 配置Mysql 修改DataSource.groovy 之后 run-app 报Cannot load JDBC driver class错误</a> 作者：<a href="http://blog.sina.com.cn/u/1829816933">大头公子</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[My First Python & Groovy & Grails]]></title>
-    <link href="http://marklma.ml/2013/09/01/My-First-Python-Groovy-Grails/"/>
-    <updated>2013-09-01T06:45:34+08:00</updated>
-    <id>http://marklma.ml/2013/09/01/My-First-Python-Groovy-Grails/</id>
-    <content type="html"><![CDATA[<p>工作后，身为JAVA入门者的我一般需要编程都还是用Java来解决日常工作中遇到的一些小问题。总是感觉用Java开发实在是有些杀鸡焉用牛刀的感觉，也感觉java中编译再运行的感觉不适合快速开发一些只需要跑一次就可以丢弃的小程序，不像javascript、vbsript这类动态语言即编即用，而且像我这种还脱离不了eclipse的杂鱼来说，公司电脑跑一个eclipse就是一种摧残。所以一直想找一个动态语言来耍耍。</p>
-]]></content>
   </entry>
 </feed>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="zh"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>(initramfs) Unable to Find a Medium Containing a Live File System - MarkLMa's 的随笔小屋</title>
+  <meta name="author" content="Mark L Ma">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="OpooPressSiteRoot" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="OpooPress-1.1.1"/>
+  <meta name="Generated" content="2015-02-19T13:12:32+08:00"/>
+  <link rel="canonical" href="/2014/11/15/initramfs-error-in-ubuntu/">
+  
+  
+  <link href="/favicon.ico" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="MarkLMa's 的随笔小屋" type="application/atom+xml">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href="//fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic|PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="/javascripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+  <!--[if lt IE 9]><script src="/javascripts/unsupported-browser.js"></script><![endif]-->
+  <header role="banner"><hgroup>
+  <h1><a href="/">MarkLMa's 的随笔小屋</a></h1>
+    <h2>逝者如斯夫，不舍昼夜，so keep bloging.</h2>
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+<form action="http://wen.lu/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:http://marklma.ga" />
+    <input class="search" type="text" name="q" results="0" placeholder="搜索"/>
+  </fieldset>
+</form>
+
+<fieldset class="mobile-nav">
+  <select onchange="if (this.value) { window.location.href = this.value;}">
+    <option value="">导航&hellip;</option>
+    <option value="/">&raquo; 文章</option>
+    <option value="/archives/">&raquo; 归档</option>
+    <option value="/about/">&raquo; 关于</option>
+    <option value="/donate/">&raquo; 捐献</option>
+  </select>
+</fieldset>
+
+<ul class="main-navigation">
+<li><a href="/">文章</a></li>
+<li><a href="/archives/">归档</a></li>
+<li><a href="/about/">关于</a></li>
+<li><a href="/donate/">捐献</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+<div>
+<article class="hentry" role="article">
+  <header>
+      <h1 class="entry-title">(initramfs) Unable to Find a Medium Containing a Live File System</h1>
+
+      <p class="meta">
+		
+
+
+<time datetime="2014-11-15T23:15:00+08:00" pubdate>11/15/2014</time>
+         | <a href="#ds-thread">评论</a>
+      </p>
+  </header>
+
+  <div class="entry-content"><p>笔者两台本本在使用U盘安装Linux的时候都遇到过initramfs这个问题，出现问题多半是安装Ubuntu或者其嫡系版本，如Deepin、Ubuntu、Linux Mint等。</p>
+<!--more-->
+<h2>现象</h2>
+<p>一般是做好安装U盘后，从U盘启动后就会卡在如下显示的界面：</p>
+<pre>Completing the Ubuntu installation.
+For more installation boot options, press 'ESC' now...
+
+BusyBox v1.18.5 (Ubuntu 1:1.18.5-1ubuntu4) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+(initramfs) Unable to find a medium containing a live file system
+</pre><p>或<img src="http://marklma.qiniudn.com/img/initramfs.jpg" alt="(initramfs) Unable to find a medium containing a live file system" />
+出现以下界面后一般无法继续安装，有时候即使使用<strong>光盘</strong>或者wubi的硬盘安装也无法解决。</p>
+<h2>原因</h2>
+<p>笔者上网搜索，感觉答案都不是很靠谱，比如主板比较先进，CDROM插到SATA3接口上，如果将CDROM改到别的接口上即可。可是哥的是本本呀，总不可能为了装个操作系统还拆机吧？
+总之找了一通网上对该问题的原因没有一个可信服的权威解释。</p>
+<h2>解决方案</h2>
+<p>虽然原因不明，但是经过针对网上几个方案实践以及自身猜测，有以下几个方案。</p>
+<h3>深度启动盘制作工具</h3>
+<p>使用Deepin的<a href="http://wiki.linuxdeepin.com/index.php?title=%E6%B7%B1%E5%BA%A6%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7">深度启动盘制作工具</a>制作引导U盘，开机选择U盘引导时选择<strong>UEFI</strong>的那一项进行引导安装。笔者第一台电脑上实验成功，改本本比较新，可以支持UEFI引导。</p>
+<h3>使用ultraISO制作启动盘</h3>
+<p>笔者第二台本本比较旧，使用UEFI引导好像没有反应。于是使用老牌ISO镜像制作工具——ultraISO制作启动盘，其中使用<strong>USB-UDD启动模式</strong>制作启动盘。</p>
+<h3>其它方法</h3>
+<p>笔者没有试过这些方法，不过看起来比较靠谱，可以尝试。</p>
+<ul>
+<li>将U盘插到USB2.0接口上引导启动（建议启动盘是USB-UDD启动模式）。</li>
+<li>硬盘模式从IDE改为AHCI或者反过来。</li>
+</ul>
+<p>我在网上也见到了尝试各种方法都失败了的，最终解决好像都是升级BIOS版本才解决。</p>
+<h2>写在后面</h2>
+<p>这么一个问题有那么多人遇到，时隔那么久，至今也没有从版本层面解决，从这个问题可以看出来，Linux桌面化普及果然还有很长一段路要走。</p>
+</div>
+  <footer>
+    <p class="meta">
+      <div style="font-size:80%">
+<div>
+<div align="center">希望本站内容对您有点用处,有什么疑问或建议请在后面留言评论</div>
+<div style="text-indent:2em;">若无特别注明，本站内容均属原创,转载请注明作者(<a href="http://marklma.ga">Mark L Ma</a>)和出处 <a href="http://marklma.ga/2014/11/15/initramfs-error-in-ubuntu/">MarkLMa's 的随笔小屋</a> ，请勿用于任何商业用途。</div>
+<div style="text-indent:2em;">本文链接: <a href="http://marklma.ga/2014/11/15/initramfs-error-in-ubuntu/">http://marklma.ga/2014/11/15/initramfs-error-in-ubuntu/</a></div>
+</div><span class="byline author vcard">作者 <span class="fn">Mark L Ma</span></span>      
+
+
+<time datetime="2014-11-15T23:15:00+08:00" pubdate>11/15/2014</time>
+      
+<span class="categories">属于 <a class="category" href="/category/linux/">Linux</a>
+ 分类</span>
+
+
+<span class="categories">被贴了 <a class="tag" href="/tag/linux/">Linux</a>, <a class="tag" href="/tag/linux-mint/">Linux Mint</a>
+ 标签</span>
+</div>
+    </p>
+<div class="sharing">
+      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
+<p>
+  <h2>相关文章</h2>
+  <ul id="related-posts-list">
+      <li class="post">
+        <a href="/2014/11/23/after-installing-linux-mint/">安装LinuxMint之后</a>
+        <div class="source right"><time datetime="2014-11-23T13:26:00">2014-11-23</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/11/11/linux-again/">又用Linux</a>
+        <div class="source right"><time datetime="2014-11-11T23:15:00">2014-11-11</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/11/29/sublime-text-3065-in-mint/">Linux Mint下SublimeText的中文输入法问题</a>
+        <div class="source right"><time datetime="2014-11-29T20:15:00">2014-11-29</time></div>
+      </li>
+  </ul>
+</p>    <p class="meta">
+        <a class="basic-alignment left" href="/2014/11/11/linux-again/" title="上一篇: 又用Linux">&laquo; 又用Linux</a>
+        <a class="basic-alignment right" href="/2014/11/17/devil-cooking1/" title="下一篇: Mark料理教程第一季第一集">Mark料理教程第一季第一集 &raquo;</a>
+    </p>
+  </footer>
+</article>
+  <section>
+    <h1>评论</h1>
+    <div id="ds-thread" class="ds-thread" data-thread-key="/2014/11/15/initramfs-error-in-ubuntu/" data-title="(initramfs) Unable to Find a Medium Containing a Live File System"></div>
+  </section>
+</div>
+<aside class="sidebar">
+
+<section>
+  <h1>分类</h1>
+  <ul id="categories">
+	<li class="category"><a href="/category/xiao-pin/">小品</a><span class="count right">5</span>
+	</li>
+	<li class="category"><a href="/category/jing-li-gan-wu/">经历感悟</a><span class="count right">21</span>
+	</li>
+	<li class="category"><a href="/category/gong-ju-ji-shu/">工具技术</a><span class="count right">10</span>
+	</li>
+	<li class="category"><a href="/category/j2ee/">J2EE</a><span class="count right">9</span>
+	</li>
+	<li class="category"><a href="/category/android/">Android</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/database/">Database</a><span class="count right">3</span>
+	</li>
+	<li class="category"><a href="/category/groovy/">groovy</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/bo-ke-xiang-guan/">博客相关</a><span class="count right">8</span>
+	</li>
+	<li class="category"><a href="/category/jian-kang/">健康</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/linux/">Linux</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/men-wai-han-chu-fang-ru-men/">门外汉厨房入门</a><span class="count right">2</span>
+	</li>
+	<li class="category"><a href="/category/yue-du-bi-ji/">阅读笔记</a><span class="count right">6</span>
+	</li>
+  </ul>
+</section>
+<section>
+  <h1>近期文章</h1>
+  <ul id="recent_posts">
+  
+  
+      <li class="post">
+        <a href="/2015/02/19/mark-comic-recommendation-5/">伪宅的漫画推荐 - 5</a>
+      </li>
+      <li class="post">
+        <a href="/2015/02/11/mark-comic-recommendation-4/">伪宅的漫画推荐 - 4</a>
+      </li>
+      <li class="post">
+        <a href="/2015/02/11/mark-comic-recommendation-3/">伪宅的漫画推荐 - 3</a>
+      </li>
+      <li class="post">
+        <a href="/2015/02/07/mark-comic-recommendation-2/">伪宅的漫画推荐 - 2</a>
+      </li>
+      <li class="post">
+        <a href="/2015/02/02/mark-comic-recommendation-1/">伪宅的漫画推荐 - 1</a>
+      </li>
+  </ul>
+</section>
+<section>
+  <h1>标签</h1>
+  <ul id="tags">
+	<li class="tag"><span><a href="/tag/zhai-chao/">摘抄</a></span><span class="count">8</span></li>
+	<li class="tag"><span><a href="/tag/j2ee-ru-men/">J2EE入门</a></span><span class="count">7</span></li>
+	<li class="tag"><span><a href="/tag/man-hua/">漫画</a></span><span class="count">5</span></li>
+	<li class="tag"><span><a href="/tag/zhuan-tie/">转帖</a></span><span class="count">4</span></li>
+	<li class="tag"><span><a href="/tag/peng-ren/">烹饪</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/linux/">Linux</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/jian-kang/">健康</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/grails/">Grails</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/xiao-pin/">小品</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/men-wai-han-chu-fang-ru-men/">门外汉厨房入门</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/mian-fei-yu-ming/">免费域名</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/hexo/">hexo</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/zheng-ze-biao-da-shi/">正则表达式</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/zuo-fan/">做饭</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/chu-yi/">厨艺</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/linux-mint/">Linux Mint</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/jian-zhi/">减脂</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/si-wei-dao-tu/">思维导图</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/gtd/">GTD</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/san-li/">三里</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/blog/">blog</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/theme/">theme</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/opoopress/">opoopress</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/hello-world/">Hello World</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/groovy/">groovy</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/java/">java</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/database/">Database</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/jdk-an-zhuang/">JDK安装</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/you-mo/">幽默</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/bootstrap/">bootstrap</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mindmap/">Mindmap</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/shi-jian-guan-li/">时间管理</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/wei-he-ya-ke/">维和牙科</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/zhi-chi/">智齿</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ya-chi/">牙齿</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mindmanager/">MindManager</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/freeplane/">freeplane</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/freemind/">freemind</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/sheng-huo/">生活</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/gong-zuo/">工作</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/qian-duan/">前端</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/shang-lin/">上林</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/zhu-ti/">主题</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mian-fei-dns/">免费DNS</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/a-li-yun-jie-xi/">阿里云解析</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/freenom/">freenom</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ga/">ga</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/tk/">tk</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/xie-zuo/">写作</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/markdown/">Markdown</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/cz.cc/">cz.cc</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/uni.me/">uni.me</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/domain/">domain</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/jing-tai-wang-zhan-sheng-cheng-qi/">静态网站生成器</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/first-blog/">First Blog</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ant/">ant</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/linuxmint/">LinuxMint</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/duan-lian/">锻炼</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/jian-fei/">减肥</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/pkm/">PKM</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/bo-ke/">博客</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/tu-pian/">图片</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/shang-lin/">上林'</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/jiu/">酒</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hql/">hql</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/lie-gen-xing/">劣根性</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/h2database/">h2database</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mysql/">Mysql</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/python/">python</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/groovy/">Groovy</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/dong-tai-yu-yan/">动态语言</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/code/">code</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/bian-ma/">编码</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/my.ini/">my.ini</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mysql/">mysql</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/commons/">commons</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/fileupload/">fileupload</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hibernate4.1/">hibernate4.1</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hibernateutil/">hibernateutil</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hibernate/">hibernate</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/android/">Android</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/apn/">APN</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mark-an-zhuo-jiao-cheng/">Mark安卓教程</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/tomcat/">TOMCAT</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/an-quan/">安全</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/tomcat/">Tomcat</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/eclipse/">Eclipse</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/wang-luo/">网络</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/shou-lei/">手雷</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/bian-zheng-fa/">辩证法</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/chao-xian/">朝鲜</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/yao-yan/">谣言</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ji-yi/">记忆</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/sheng-ri/">生日</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/guan-hou-gan/">观后感</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/dian-ying/">电影</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/wu-ti/">无题</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/windows/">windows</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ntfs/">ntfs</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/yin-zang/">隐藏</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/bat/">bat</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hui-yi/">回忆</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/u-pan-bing-du/">u盘病毒</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/du-hou-gan/">读后感</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/xia-xiang/">瞎想</a></span><span class="count">1</span></li>
+  </ul>
+</section>
+<section>
+<h1>最新评论</h1>
+<!-- 多说最新评论 start -->
+	<div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+<!-- 多说最新评论 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"marklma"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
+<section>
+<h1>新浪微博秀</h1>
+<iframe width="100%" height="300" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=300&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=1&isWeibo=1&isFans=0&uid=1665012821&verifier=9b0c78f9&dpc=1"></iframe>
+</section><section>
+<h1>来访者</h1>
+<script type="text/javascript" src="http://je.revolvermaps.com/2/1.js?i=4z3kuips3dq&amp;s=260&amp;m=1&amp;v=true&amp;r=false&amp;b=ffffff&amp;n=false&amp;c=ff0000" async="async"></script>
+</section>
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title='返回顶部'><img src="/images/scrollup.png"/></a>
+</div></aside>
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  版权所有 &copy; 2015 - Mark L Ma -
+  <span class="credit">Powered by <a href="http://www.opoopress.com/">OpooPress</a>&nbsp;  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1,252,947,862'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1,252,947,862%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</span>
+</p>
+</footer>
+<script type="text/javascript" src="/javascripts/opoopress.min.js"></script>
+<script type="text/javascript" src="/javascripts/totop.js"></script>
+<script language="JavaScript">
+<!--
+    window.OpooPress = new OpooPressApp({siteUrl:'http://marklma.ga',rootUrl:'',pageUrl:'/2014/11/15/initramfs-error-in-ubuntu/',title:'(initramfs) Unable to Find a Medium Containing a Live File System',refreshRelativeTimes:false,verbose:false},{});
+    OpooPress.init();
+
+
+var duoshuoQuery = {short_name:"MarkLMa"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+//-->
+</script>
+
+
+<script>
+var _hmt = _hmt || [];
+_js2load.push({src:"//hm.baidu.com/hm.js?509d4839538ac35b343eaa32d5a8f6f1"});
+</script>
+</body>
+</html>
+

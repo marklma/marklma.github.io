@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="zh"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>一款hexo主题 - MarkLMa's 的随笔小屋</title>
+  <meta name="author" content="Mark L Ma">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="OpooPressSiteRoot" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="OpooPress-1.1.1"/>
+  <meta name="Generated" content="2015-02-19T13:12:32+08:00"/>
+  <link rel="canonical" href="/2014/08/10/hexo-theme-marklma/">
+  
+  
+  <link href="/favicon.ico" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="MarkLMa's 的随笔小屋" type="application/atom+xml">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href="//fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic|PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="/plugins/syntax-highlighter/styles/shCoreDefault.css"/>
+  <!--[if lt IE 9]><script src="/javascripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+  <!--[if lt IE 9]><script src="/javascripts/unsupported-browser.js"></script><![endif]-->
+  <header role="banner"><hgroup>
+  <h1><a href="/">MarkLMa's 的随笔小屋</a></h1>
+    <h2>逝者如斯夫，不舍昼夜，so keep bloging.</h2>
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+<form action="http://wen.lu/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:http://marklma.ga" />
+    <input class="search" type="text" name="q" results="0" placeholder="搜索"/>
+  </fieldset>
+</form>
+
+<fieldset class="mobile-nav">
+  <select onchange="if (this.value) { window.location.href = this.value;}">
+    <option value="">导航&hellip;</option>
+    <option value="/">&raquo; 文章</option>
+    <option value="/archives/">&raquo; 归档</option>
+    <option value="/about/">&raquo; 关于</option>
+    <option value="/donate/">&raquo; 捐献</option>
+  </select>
+</fieldset>
+
+<ul class="main-navigation">
+<li><a href="/">文章</a></li>
+<li><a href="/archives/">归档</a></li>
+<li><a href="/about/">关于</a></li>
+<li><a href="/donate/">捐献</a></li>
+</ul>
+</nav>
+  <div id="main">
+    <div id="content">
+<div>
+<article class="hentry" role="article">
+  <header>
+      <h1 class="entry-title">一款hexo主题</h1>
+
+      <p class="meta">
+		
+
+
+<time datetime="2014-08-10T17:34:00+08:00" pubdate>08/10/2014</time>
+         | <a href="#ds-thread">评论</a>
+      </p>
+  </header>
+
+  <div class="entry-content"><p>在我的Life TodoList里面，有一项是想美化一个主题或者美化一个ROM。之前机缘巧合，心血来潮花了1个多月实践用了一下bootstrap，也算是对web的主题有了一个入门了解，加上近期弄blog，且碰上一个小长假，趁机划掉这个TodoList吧。</p>
+<p>就像第一篇里面写的，hexo主题中很多都不错，其中<a href="https://github.com/A-limon/pacman">pacman</a>、<a href="https://github.com/xiangming/landscape-plus">landscape+</a>、<a href="https://github.com/chenall/hexo-theme-chenall">chenall</a>主题都很不错。不过由于种种问题，最终还是打算使用chenall主题，而且人家的主题功能做得确实不错：<code>一款模块化的hexo主题</code>，所以最后是在chenall主题上进行少许功能添加和美化，不过修改内容较少，我都不好意思说这是我做的了。最后想想还是厚着脸皮在github上建了个<a href="(https://github.com/marklma/hexo-theme-marklma)">Project</a>。</p>
+<p>查了各种资料之后，终于做出一个符合自己口味的主题样式（一直没有艺术细胞，请各位不要介意）。</p>
+<p>最后贴上相关说明文件（实际上大部分抄自chenall大大的<a href="https://github.com/chenall/hexo-theme-chenall/blob/master/README.md">chenall的配置</a>）。</p>
+<!--more-->
+<p>本主题基于<a href="http://hexo.io/">Hexo</a>主题<a href="https://github.com/chenall/hexo-theme-chenall">chenall V2.2</a>修改而成,未在主要功能上做相关改动,仅仅增加一些小插件以及按照自己想法<em>美化</em>主题.</p>
+<ul>
+<li>用户配置文件也采用chenall的方案(自动加载<code>$SOURCE\_$THEME.yml</code>[默认就是<strong>source\_marklma.yml</strong>]作为主题的配置文件,这样可以避免升级主题或其它原因导致的配置文件丢失).</li>
+</ul>
+<h3><strong>具体效果:</strong> <a href="http://marklma.ga">demo</a> 或我的搏客 [marklma.ga] gitcafe.com/marklma里面有这两个站点的完整源码</h3>
+<h2>安装方法</h2>
+<p>通过以下命令下载主题到您的theme目录，然后修改blog的_config.yml中theme为marklma。</p>
+<pre>git clone git://github.com/marklma/hexo-theme-marklma.git themes/marklma
+</pre><p>或</p>
+<pre>svn co -r HEAD https://github.com/marklma/hexo-theme-marklma/trunk themes/marklma
+</pre><h2>更新</h2>
+<pre>cd themes/marklma
+git pull 或 svn up
+</pre><p>其它配置与<a href="https://github.com/chenall/hexo-theme-chenall/blob/master/README.md">chenall的配置</a>基本一致。</p>
+<h2>主题配置说明</h2>
+<p>注: 配置中如果需要访问到本地路径,除非特别指定否则应该用<code>css/theme.css</code>不要写成<code>/css/theme.css</code>,前者是相对路径会自动添加config.root路径.后者是绝对路径.</p>
+<p>本主题特色: <strong>把这个配置文件复制到<code>source</code>目录下并改名为_marklma.yml则会优先使用该配置,这样可以避免由于升级主题或其它原因导致的配置丢失.更方便使用.</strong></p>
+<p>默认的配置:</p>
+<pre class='brush:yaml'># Site default meta keywords
+#keywords: site, wide, default, keywords
+#已加载的模块,按顺序加载,所以需要自己调整加载的顺序,比如jquery一般要加载在最前面
+loaded_modules:
+- jquery
+- bootstrap
+- fontawesome
+- prettify
+- fancybox
+- swiftype
+#- mathjax
+- totop
+
+# 注: 模块是由css或js文件来实现的,部份需要附加js代码的模块在_modules目录下.
+# 如: prettify 如果加载了prettify则会同时加载_modules\_modules.ejs
+# 部份模块是自动按需加载的,在模板中添加如下代码加载多说的JS模块
+# &lt;% theme.add_module('duoshuo'); %&gt;
+#
+#
+modules:
+  # respond 不要放到loaded_modules中,这个会自动加载
+  # proxy 指定respond的proxy地址
+  # 注: bootstrap的css文件和这个proxy需要在同一个域上
+  respond: ## A fast &amp; lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more).
+    js: //cdn.staticfile.org/respond.js/1.4.2/respond.min.js
+    proxy: //cdn.staticfile.org/respond.js/1.4.2/respond-proxy.html
+  jquery:
+    js: //cdn.bootcss.com/jquery/1.10.2/jquery.min.js
+  bootstrap: #强大的CSS框架，由Twitter的开发工程师推出
+    css: //cdn.staticfile.org/twitter-bootstrap/3.1.0/css/bootstrap.min.css
+    js: //cdn.staticfile.org/twitter-bootstrap/3.1.0/js/bootstrap.min.js
+  prettify: # Google Code Prettify 代码的高亮显示
+    css: //cdn.bootcss.com/prettify/r298/prettify.min.css
+    js: //cdn.bootcss.com/prettify/r298/prettify.min.js
+  highlightjs: # highlight.js 代码高亮显示插件
+    css: //cdn.bootcss.com/highlight.js/7.4/styles/github.min.css
+    js:  //cdn.bootcss.com/highlight.js/7.4/highlight.min.js
+  fancybox: # 一款基于jQuery开发的类Lightbox插件
+    css: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
+    js:  //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
+  imagesloaded: #监测图片是否加载完毕的JavaScript库
+    #js: js/jquery.imagesloaded.min.js
+     js: //cdn.bootcss.com/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js
+  Gallery:
+    css: //cdn.bootcss.com/blueimp-gallery/2.11.2/css/blueimp-gallery.min.css
+    js: //cdn.bootcss.com/blueimp-gallery/2.11.2/js/jquery.blueimp-gallery.min.js
+  fontawesome:
+    css: //cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css
+  # MathJax is an open source JavaScript display engine for mathematics that works in all browsers.
+  mathjax: # 生成数学公式插件
+    css:
+    js: //cdn.bootcss.com/mathjax/2.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    #js: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  # totop is a stroll up plungin
+  totop:  # totip 是添加返回顶部功能
+    js: /js/totop.js
+  uyan: #有言评论系统
+    uid: 1880458
+  ujian: #友荐：为网站添加'猜你喜欢'功能
+    uid: 1880458
+  swiftype: #Swiftype配置，详情访问https://swiftype.com
+  #key对应的Engine Key 在https://swiftype.com/home可以看到。
+    key: 
+
+##评论功能设置,目前支持disqus和duoshuo/uyan,需要在上面的modules中进行要应的设置
+# show_count 是否显示文章的评论数量
+# short_name 对应的short_name
+# 需要的其它参数也可以加在下面,然后自己修改模板来使用.theme.comments.xxxxxx来调用
+#
+# 
+comments:
+    provider: duoshuo
+    show_count: true
+    short_name: MarkLMa
+
+## 站点分析统计代码功能组件
+# 加载在站点的footer位置
+analytics:
+  # provider 要加载的统计代码类型,可同时加载多少,使用","分隔. 如下就加载了51la和google的统计代码
+  # provider: 51la,google,cnzz,baidu 
+  provider: cnzz,baidu
+  # google-analytics UA
+  google:
+  # 我要啦」免费统计 ID
+  51la:
+  # cnzz 免费统计
+  cnzz:
+    siteid:   #站点ID,在获取统计代码的页面的地址栏上可以看到siteid=xxxx或从代码中提取(一般是一串数字)
+    show: #显示样式  留空: 图片形式1; 1: 图片形式2; 2: 图片形式1; 其它值: 文字形式
+  baidu: # 百度统计对应站点的hash信息，在百度统计中获取的代码中的32个字符串信息 %3F 后面的32个十六进制字符串。类似下面的
+    siteid: 
+
+# 站点顶部菜单,支持子菜单
+menu:
+  Home: ''
+  About: about/
+  Archives: archives/
+  其它链接:
+    marklma: //marklma.ga
+    sourse: https://gitcafe.com/marklma
+    weibo: http://www.weibo.com/marklma
+
+# ajax_widgets是否使用jquery.load动态加载widget的内容,
+# 注: 部份小工具,像标签,分类,最近文章等,这些工具的内容在所有页面都是一样的,这时它就支持动态加载
+# 所谓的动态加载,就是把这些内容从文章中分离出来独立存在,并采用ajax技术动态加载到指定位置.
+# 使用动态加载,更新文章时,就不会因为分类或标签等内容的更改,导致所有页面都需要更新.
+#
+ajax_widgets: true
+
+# 要加载的工具在这里添加
+widgets:
+  header: #顶部
+  footer: #底部
+  sidebar: #侧边栏
+    - swiftype
+    #- search
+    - category
+    - recent_posts
+    - tagcloud
+    #- tags
+    - latest_update_posts
+    #- random_posts
+    - sina_weiboshow
+    - recent_comments
+    - visitmap
+  before_content: # 文章内容前
+  after_content:  # 文章内容后
+    - totop
+    #- wumiiRelatedItems
+    - post_footer_info
+    - ujian
+
+  after_post:     # 文章框架之后
+    - post_pageNav
+    - related_posts
+
+# For use with tagcloud or tag widgets
+# - only tags &gt;= to tag_minium are shown
+tag_minium: 3
+
+## Google 跟踪代码管理器 设置
+## https://www.google.com/tagmanager/
+## ID 就是对应容器的ID
+## GoogleTagManagerID: GTM-ABCDEF
+GTM_ID:
+
+## 在文章中使用'//marklma.qiniudn.com'字符串自动替换为下面的地址,主要是为了方便使用.
+CDN_URL: //your.cdn.url
+
+## ICP备案编号
+Beian:
+
+## 使用反色的导航条，请根据banner图片修改
+bs_nav_inverse: true
+
+twitter_id: marklma
+facebook_id: marklma
+linkedin_id: MarkLMa
+github_id: marklma
+
+rss: atom.xml
+
+## favicon 
+favicon: favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/source
+apple_icon: favicon.png  ## size:114px*114px,please put image into the theme folder `/source`.
+</pre><p>相关资料：</p>
+<ul>
+<li>http://zipperary.com/2013/05/30/hexo-guide-4/</li>
+<li>http://ibruce.info/2013/11/22/hexo-your-blog/</li>
+<li>https://github.com/hexojs/hexo/wiki/Themes</li>
+<li>https://github.com/xiangming/landscape-plus</li>
+<li>https://github.com/chenall/hexo-theme-chenall</li>
+<li>http://wuchong.me/blog/2014/01/08/hexo-scrollup/</li>
+<li>http://zipperary.com/2013/06/26/hexo-theme-alteration/</li>
+</ul>
+<p>主题缺点：</p>
+<ul>
+<li>不知道为什么，chenall主题在IE7下表现良好，我这个主题不知为啥IE8没问题，IE7只能良好表现1秒钟。然后就……程序员为了身体健康确实应该远离IE。</li>
+<li>个人审美问题</li>
+</ul>
+</div>
+  <footer>
+    <p class="meta">
+      <div style="font-size:80%">
+<div>
+<div align="center">希望本站内容对您有点用处,有什么疑问或建议请在后面留言评论</div>
+<div style="text-indent:2em;">若无特别注明，本站内容均属原创,转载请注明作者(<a href="http://marklma.ga">Mark L Ma</a>)和出处 <a href="http://marklma.ga/2014/08/10/hexo-theme-marklma/">MarkLMa's 的随笔小屋</a> ，请勿用于任何商业用途。</div>
+<div style="text-indent:2em;">本文链接: <a href="http://marklma.ga/2014/08/10/hexo-theme-marklma/">http://marklma.ga/2014/08/10/hexo-theme-marklma/</a></div>
+</div><span class="byline author vcard">作者 <span class="fn">Mark L Ma</span></span>      
+
+
+<time datetime="2014-08-10T17:34:00+08:00" pubdate>08/10/2014</time>
+      
+<span class="categories">属于 <a class="category" href="/category/bo-ke-xiang-guan/">博客相关</a>
+ 分类</span>
+
+
+<span class="categories">被贴了 <a class="tag" href="/tag/hexo/">hexo</a>, <a class="tag" href="/tag/theme/">theme</a>, <a class="tag" href="/tag/zhu-ti/">主题</a>
+ 标签</span>
+</div>
+    </p>
+<div class="sharing">
+      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
+<p>
+  <h2>相关文章</h2>
+  <ul id="related-posts-list">
+      <li class="post">
+        <a href="/2014/10/01/marklma-opoopress-theme/">Marklma-opoopress-theme</a>
+        <div class="source right"><time datetime="2014-10-01T19:08:00">2014-10-01</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/07/30/MyFirstBlog/">Hello World</a>
+        <div class="source right"><time datetime="2014-07-30T23:48:00">2014-07-30</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/08/05/My-Blog-Domain-2/">我的博客自定义tk域名经历</a>
+        <div class="source right"><time datetime="2014-08-05T16:19:00">2014-08-05</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/08/03/Use-Markdown/">使用Markdown书写感慨</a>
+        <div class="source right"><time datetime="2014-08-03T19:57:00">2014-08-03</time></div>
+      </li>
+      <li class="post">
+        <a href="/2014/08/02/My-Blog-Domain-1/">我的博客自定义二级域名经历</a>
+        <div class="source right"><time datetime="2014-08-02T00:08:00">2014-08-02</time></div>
+      </li>
+  </ul>
+</p>    <p class="meta">
+        <a class="basic-alignment left" href="/2014/08/05/My-Blog-Domain-2/" title="上一篇: 我的博客自定义tk域名经历">&laquo; 我的博客自定义tk域名经历</a>
+        <a class="basic-alignment right" href="/2014/08/14/settle-in-sanli/" title="下一篇: 三里任职随笔">三里任职随笔 &raquo;</a>
+    </p>
+  </footer>
+</article>
+  <section>
+    <h1>评论</h1>
+    <div id="ds-thread" class="ds-thread" data-thread-key="/2014/08/10/hexo-theme-marklma/" data-title="一款hexo主题"></div>
+  </section>
+</div>
+<aside class="sidebar">
+
+<section>
+  <h1>分类</h1>
+  <ul id="categories">
+	<li class="category"><a href="/category/xiao-pin/">小品</a><span class="count right">5</span>
+	</li>
+	<li class="category"><a href="/category/jing-li-gan-wu/">经历感悟</a><span class="count right">21</span>
+	</li>
+	<li class="category"><a href="/category/gong-ju-ji-shu/">工具技术</a><span class="count right">10</span>
+	</li>
+	<li class="category"><a href="/category/j2ee/">J2EE</a><span class="count right">9</span>
+	</li>
+	<li class="category"><a href="/category/android/">Android</a><span class="count right">1</span>
+	</li>
+	<li class="category"><a href="/category/database/">Database</a><span class="count right">3</span>
+	</li>
+	<li class="category"><a href="/category/groovy/">groovy</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/bo-ke-xiang-guan/">博客相关</a><span class="count right">8</span>
+	</li>
+	<li class="category"><a href="/category/jian-kang/">健康</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/linux/">Linux</a><span class="count right">4</span>
+	</li>
+	<li class="category"><a href="/category/men-wai-han-chu-fang-ru-men/">门外汉厨房入门</a><span class="count right">2</span>
+	</li>
+	<li class="category"><a href="/category/yue-du-bi-ji/">阅读笔记</a><span class="count right">6</span>
+	</li>
+  </ul>
+</section>
+<section>
+  <h1>近期文章</h1>
+  <ul id="recent_posts">
+  
+  
+      <li class="post">
+        <a href="/2015/02/19/mark-comic-recommendation-5/">伪宅的漫画推荐 - 5</a>
+      </li>
+      <li class="post">
+        <a href="/2015/02/11/mark-comic-recommendation-4/">伪宅的漫画推荐 - 4</a>
+      </li>
+      <li class="post">
+        <a href="/2015/02/11/mark-comic-recommendation-3/">伪宅的漫画推荐 - 3</a>
+      </li>
+      <li class="post">
+        <a href="/2015/02/07/mark-comic-recommendation-2/">伪宅的漫画推荐 - 2</a>
+      </li>
+      <li class="post">
+        <a href="/2015/02/02/mark-comic-recommendation-1/">伪宅的漫画推荐 - 1</a>
+      </li>
+  </ul>
+</section>
+<section>
+  <h1>标签</h1>
+  <ul id="tags">
+	<li class="tag"><span><a href="/tag/zhai-chao/">摘抄</a></span><span class="count">8</span></li>
+	<li class="tag"><span><a href="/tag/j2ee-ru-men/">J2EE入门</a></span><span class="count">7</span></li>
+	<li class="tag"><span><a href="/tag/man-hua/">漫画</a></span><span class="count">5</span></li>
+	<li class="tag"><span><a href="/tag/zhuan-tie/">转帖</a></span><span class="count">4</span></li>
+	<li class="tag"><span><a href="/tag/peng-ren/">烹饪</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/linux/">Linux</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/jian-kang/">健康</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/grails/">Grails</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/xiao-pin/">小品</a></span><span class="count">3</span></li>
+	<li class="tag"><span><a href="/tag/men-wai-han-chu-fang-ru-men/">门外汉厨房入门</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/mian-fei-yu-ming/">免费域名</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/hexo/">hexo</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/zheng-ze-biao-da-shi/">正则表达式</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/zuo-fan/">做饭</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/chu-yi/">厨艺</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/linux-mint/">Linux Mint</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/jian-zhi/">减脂</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/si-wei-dao-tu/">思维导图</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/gtd/">GTD</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/san-li/">三里</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/blog/">blog</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/theme/">theme</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/opoopress/">opoopress</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/hello-world/">Hello World</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/groovy/">groovy</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/java/">java</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/database/">Database</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/jdk-an-zhuang/">JDK安装</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/you-mo/">幽默</a></span><span class="count">2</span></li>
+	<li class="tag"><span><a href="/tag/bootstrap/">bootstrap</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mindmap/">Mindmap</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/shi-jian-guan-li/">时间管理</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/wei-he-ya-ke/">维和牙科</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/zhi-chi/">智齿</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ya-chi/">牙齿</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mindmanager/">MindManager</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/freeplane/">freeplane</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/freemind/">freemind</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/sheng-huo/">生活</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/gong-zuo/">工作</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/qian-duan/">前端</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/shang-lin/">上林</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/zhu-ti/">主题</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mian-fei-dns/">免费DNS</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/a-li-yun-jie-xi/">阿里云解析</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/freenom/">freenom</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ga/">ga</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/tk/">tk</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/xie-zuo/">写作</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/markdown/">Markdown</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/cz.cc/">cz.cc</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/uni.me/">uni.me</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/domain/">domain</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/jing-tai-wang-zhan-sheng-cheng-qi/">静态网站生成器</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/first-blog/">First Blog</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ant/">ant</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/linuxmint/">LinuxMint</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/duan-lian/">锻炼</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/jian-fei/">减肥</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/pkm/">PKM</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/bo-ke/">博客</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/tu-pian/">图片</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/shang-lin/">上林'</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/jiu/">酒</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hql/">hql</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/lie-gen-xing/">劣根性</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/h2database/">h2database</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mysql/">Mysql</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/python/">python</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/groovy/">Groovy</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/dong-tai-yu-yan/">动态语言</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/code/">code</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/bian-ma/">编码</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/my.ini/">my.ini</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mysql/">mysql</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/commons/">commons</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/fileupload/">fileupload</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hibernate4.1/">hibernate4.1</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hibernateutil/">hibernateutil</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hibernate/">hibernate</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/android/">Android</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/apn/">APN</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/mark-an-zhuo-jiao-cheng/">Mark安卓教程</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/tomcat/">TOMCAT</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/an-quan/">安全</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/tomcat/">Tomcat</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/eclipse/">Eclipse</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/wang-luo/">网络</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/shou-lei/">手雷</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/bian-zheng-fa/">辩证法</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/chao-xian/">朝鲜</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/yao-yan/">谣言</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ji-yi/">记忆</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/sheng-ri/">生日</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/guan-hou-gan/">观后感</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/dian-ying/">电影</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/wu-ti/">无题</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/windows/">windows</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/ntfs/">ntfs</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/yin-zang/">隐藏</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/bat/">bat</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/hui-yi/">回忆</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/u-pan-bing-du/">u盘病毒</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/du-hou-gan/">读后感</a></span><span class="count">1</span></li>
+	<li class="tag"><span><a href="/tag/xia-xiang/">瞎想</a></span><span class="count">1</span></li>
+  </ul>
+</section>
+<section>
+<h1>最新评论</h1>
+<!-- 多说最新评论 start -->
+	<div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+<!-- 多说最新评论 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"marklma"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
+<section>
+<h1>新浪微博秀</h1>
+<iframe width="100%" height="300" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=300&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=1&isWeibo=1&isFans=0&uid=1665012821&verifier=9b0c78f9&dpc=1"></iframe>
+</section><section>
+<h1>来访者</h1>
+<script type="text/javascript" src="http://je.revolvermaps.com/2/1.js?i=4z3kuips3dq&amp;s=260&amp;m=1&amp;v=true&amp;r=false&amp;b=ffffff&amp;n=false&amp;c=ff0000" async="async"></script>
+</section>
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title='返回顶部'><img src="/images/scrollup.png"/></a>
+</div></aside>
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  版权所有 &copy; 2015 - Mark L Ma -
+  <span class="credit">Powered by <a href="http://www.opoopress.com/">OpooPress</a>&nbsp;  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1,252,947,862'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1,252,947,862%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</span>
+</p>
+</footer>
+<script type="text/javascript" src="/javascripts/opoopress.min.js"></script>
+<script type="text/javascript" src="/javascripts/totop.js"></script>
+<script language="JavaScript">
+<!--
+    window.OpooPress = new OpooPressApp({siteUrl:'http://marklma.ga',rootUrl:'',pageUrl:'/2014/08/10/hexo-theme-marklma/',title:'一款hexo主题',refreshRelativeTimes:false,verbose:false},{});
+    OpooPress.init();
+
+
+var duoshuoQuery = {short_name:"MarkLMa"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+//-->
+</script>
+
+<!-- START: Syntax Highlighter ComPress -->
+<script type="text/javascript" src="/plugins/syntax-highlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="/plugins/syntax-highlighter/scripts/shAutoloader.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.autoloader(
+        'applescript			/plugins/syntax-highlighter/scripts/shBrushAppleScript.js',
+        'actionscript3 as3		/plugins/syntax-highlighter/scripts/shBrushAS3.js',
+        'bash shell				/plugins/syntax-highlighter/scripts/shBrushBash.js',
+        'coldfusion cf			/plugins/syntax-highlighter/scripts/shBrushColdFusion.js',
+        'cpp c					/plugins/syntax-highlighter/scripts/shBrushCpp.js',
+        'c# c-sharp csharp		/plugins/syntax-highlighter/scripts/shBrushCSharp.js',
+        'css					/plugins/syntax-highlighter/scripts/shBrushCss.js',
+        'delphi pascal pas		/plugins/syntax-highlighter/scripts/shBrushDelphi.js',
+        'diff patch			    /plugins/syntax-highlighter/scripts/shBrushDiff.js',
+        'erl erlang				/plugins/syntax-highlighter/scripts/shBrushErlang.js',
+        'groovy					/plugins/syntax-highlighter/scripts/shBrushGroovy.js',
+        'java					/plugins/syntax-highlighter/scripts/shBrushJava.js',
+        'jfx javafx				/plugins/syntax-highlighter/scripts/shBrushJavaFX.js',
+        'js jscript javascript	/plugins/syntax-highlighter/scripts/shBrushJScript.js',
+        'perl pl				/plugins/syntax-highlighter/scripts/shBrushPerl.js',
+        'php					/plugins/syntax-highlighter/scripts/shBrushPhp.js',
+        'text plain				/plugins/syntax-highlighter/scripts/shBrushPlain.js',
+        'powershell ps          /plugins/syntax-highlighter/scripts/shBrushPowerShell.js',
+        'py python				/plugins/syntax-highlighter/scripts/shBrushPython.js',
+        'ruby rails ror rb		/plugins/syntax-highlighter/scripts/shBrushRuby.js',
+        'sass scss              /plugins/syntax-highlighter/scripts/shBrushSass.js',
+        'scala					/plugins/syntax-highlighter/scripts/shBrushScala.js',
+        'sql					/plugins/syntax-highlighter/scripts/shBrushSql.js',
+        'vb vbnet				/plugins/syntax-highlighter/scripts/shBrushVb.js',
+        'xml xhtml xslt html	/plugins/syntax-highlighter/scripts/shBrushXml.js'
+    );
+    SyntaxHighlighter.defaults['auto-links'] = false;                 
+    SyntaxHighlighter.defaults['toolbar'] = false;     
+    SyntaxHighlighter.defaults['tab-size'] = 4;
+    SyntaxHighlighter.all();
+</script>
+<!-- END: Syntax Highlighter ComPress -->
+
+<script>
+var _hmt = _hmt || [];
+_js2load.push({src:"//hm.baidu.com/hm.js?509d4839538ac35b343eaa32d5a8f6f1"});
+</script>
+</body>
+</html>
+
